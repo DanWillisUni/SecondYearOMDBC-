@@ -6,7 +6,23 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/danny/CLionProjects/CourseWork2/Movie.cpp
+string.h
+-
+string
+-
+Movie.h
+C:/Users/danny/CLionProjects/CourseWork2/Movie.h
+
+C:/Users/danny/CLionProjects/CourseWork2/Movie.h
+string.h
+-
+string
+-
+
 C:/Users/danny/CLionProjects/CourseWork2/main.cpp
 iostream
 -
+Movie.h
+C:/Users/danny/CLionProjects/CourseWork2/Movie.h
 
