@@ -124,6 +124,60 @@ CourseWork2\fast:
 	$(MAKE) -f CMakeFiles\CourseWork2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CourseWork2.dir\build
 .PHONY : CourseWork2\fast
 
+Movie.obj: Movie.cpp.obj
+
+.PHONY : Movie.obj
+
+# target to build an object file
+Movie.cpp.obj:
+	$(MAKE) -f CMakeFiles\CourseWork2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CourseWork2.dir\Movie.cpp.obj
+.PHONY : Movie.cpp.obj
+
+Movie.i: Movie.cpp.i
+
+.PHONY : Movie.i
+
+# target to preprocess a source file
+Movie.cpp.i:
+	$(MAKE) -f CMakeFiles\CourseWork2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CourseWork2.dir\Movie.cpp.i
+.PHONY : Movie.cpp.i
+
+Movie.s: Movie.cpp.s
+
+.PHONY : Movie.s
+
+# target to generate assembly for a file
+Movie.cpp.s:
+	$(MAKE) -f CMakeFiles\CourseWork2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CourseWork2.dir\Movie.cpp.s
+.PHONY : Movie.cpp.s
+
+MovieDatabase.obj: MovieDatabase.cpp.obj
+
+.PHONY : MovieDatabase.obj
+
+# target to build an object file
+MovieDatabase.cpp.obj:
+	$(MAKE) -f CMakeFiles\CourseWork2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CourseWork2.dir\MovieDatabase.cpp.obj
+.PHONY : MovieDatabase.cpp.obj
+
+MovieDatabase.i: MovieDatabase.cpp.i
+
+.PHONY : MovieDatabase.i
+
+# target to preprocess a source file
+MovieDatabase.cpp.i:
+	$(MAKE) -f CMakeFiles\CourseWork2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CourseWork2.dir\MovieDatabase.cpp.i
+.PHONY : MovieDatabase.cpp.i
+
+MovieDatabase.s: MovieDatabase.cpp.s
+
+.PHONY : MovieDatabase.s
+
+# target to generate assembly for a file
+MovieDatabase.cpp.s:
+	$(MAKE) -f CMakeFiles\CourseWork2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CourseWork2.dir\MovieDatabase.cpp.s
+.PHONY : MovieDatabase.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -160,6 +214,12 @@ help:
 	@echo ... rebuild_cache
 	@echo ... CourseWork2
 	@echo ... edit_cache
+	@echo ... Movie.obj
+	@echo ... Movie.i
+	@echo ... Movie.s
+	@echo ... MovieDatabase.obj
+	@echo ... MovieDatabase.i
+	@echo ... MovieDatabase.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

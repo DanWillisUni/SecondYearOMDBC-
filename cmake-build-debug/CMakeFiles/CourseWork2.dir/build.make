@@ -77,17 +77,59 @@ CMakeFiles\CourseWork2.dir\main.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\CourseWork2.dir\main.cpp.s /c C:\Users\danny\CLionProjects\CourseWork2\main.cpp
 <<
 
+CMakeFiles\CourseWork2.dir\Movie.cpp.obj: CMakeFiles\CourseWork2.dir\flags.make
+CMakeFiles\CourseWork2.dir\Movie.cpp.obj: ..\Movie.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\danny\CLionProjects\CourseWork2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CourseWork2.dir/Movie.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\CourseWork2.dir\Movie.cpp.obj /FdCMakeFiles\CourseWork2.dir\ /FS -c C:\Users\danny\CLionProjects\CourseWork2\Movie.cpp
+<<
+
+CMakeFiles\CourseWork2.dir\Movie.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CourseWork2.dir/Movie.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe > CMakeFiles\CourseWork2.dir\Movie.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\danny\CLionProjects\CourseWork2\Movie.cpp
+<<
+
+CMakeFiles\CourseWork2.dir\Movie.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CourseWork2.dir/Movie.cpp.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\CourseWork2.dir\Movie.cpp.s /c C:\Users\danny\CLionProjects\CourseWork2\Movie.cpp
+<<
+
+CMakeFiles\CourseWork2.dir\MovieDatabase.cpp.obj: CMakeFiles\CourseWork2.dir\flags.make
+CMakeFiles\CourseWork2.dir\MovieDatabase.cpp.obj: ..\MovieDatabase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\danny\CLionProjects\CourseWork2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CourseWork2.dir/MovieDatabase.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\CourseWork2.dir\MovieDatabase.cpp.obj /FdCMakeFiles\CourseWork2.dir\ /FS -c C:\Users\danny\CLionProjects\CourseWork2\MovieDatabase.cpp
+<<
+
+CMakeFiles\CourseWork2.dir\MovieDatabase.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CourseWork2.dir/MovieDatabase.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe > CMakeFiles\CourseWork2.dir\MovieDatabase.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\danny\CLionProjects\CourseWork2\MovieDatabase.cpp
+<<
+
+CMakeFiles\CourseWork2.dir\MovieDatabase.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CourseWork2.dir/MovieDatabase.cpp.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\CourseWork2.dir\MovieDatabase.cpp.s /c C:\Users\danny\CLionProjects\CourseWork2\MovieDatabase.cpp
+<<
+
 # Object files for target CourseWork2
 CourseWork2_OBJECTS = \
-"CMakeFiles\CourseWork2.dir\main.cpp.obj"
+"CMakeFiles\CourseWork2.dir\main.cpp.obj" \
+"CMakeFiles\CourseWork2.dir\Movie.cpp.obj" \
+"CMakeFiles\CourseWork2.dir\MovieDatabase.cpp.obj"
 
 # External object files for target CourseWork2
 CourseWork2_EXTERNAL_OBJECTS =
 
 CourseWork2.exe: CMakeFiles\CourseWork2.dir\main.cpp.obj
+CourseWork2.exe: CMakeFiles\CourseWork2.dir\Movie.cpp.obj
+CourseWork2.exe: CMakeFiles\CourseWork2.dir\MovieDatabase.cpp.obj
 CourseWork2.exe: CMakeFiles\CourseWork2.dir\build.make
 CourseWork2.exe: CMakeFiles\CourseWork2.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\danny\CLionProjects\CourseWork2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable CourseWork2.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\danny\CLionProjects\CourseWork2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable CourseWork2.exe"
 	"C:\Program Files\JetBrains\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\CourseWork2.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\CourseWork2.dir\objects1.rsp @<<
  /out:CourseWork2.exe /implib:CourseWork2.lib /pdb:C:\Users\danny\CLionProjects\CourseWork2\cmake-build-debug\CourseWork2.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

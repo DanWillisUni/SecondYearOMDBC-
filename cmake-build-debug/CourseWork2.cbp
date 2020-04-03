@@ -82,6 +82,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/danny/CLionProjects/CourseWork2/Movie.cpp">
+			<Option target="CourseWork2"/>
+		</Unit>
+		<Unit filename="C:/Users/danny/CLionProjects/CourseWork2/Movie.h">
+			<Option target="CourseWork2"/>
+		</Unit>
+		<Unit filename="C:/Users/danny/CLionProjects/CourseWork2/MovieDatabase.cpp">
+			<Option target="CourseWork2"/>
+		</Unit>
+		<Unit filename="C:/Users/danny/CLionProjects/CourseWork2/MovieDatabase.h">
+			<Option target="CourseWork2"/>
+		</Unit>
 		<Unit filename="C:/Users/danny/CLionProjects/CourseWork2/main.cpp">
 			<Option target="CourseWork2"/>
 		</Unit>
