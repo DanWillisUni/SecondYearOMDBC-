@@ -9,7 +9,7 @@ using namespace std;
 class MovieDatabase{
 private:
     int dbSize;
-    Movie* db;
+    Movie db[0];
 public:
     MovieDatabase(Movie db[]);
     MovieDatabase(string fileName);

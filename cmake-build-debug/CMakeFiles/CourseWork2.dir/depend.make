@@ -4,6 +4,7 @@
 CMakeFiles\CourseWork2.dir\Movie.cpp.obj: ..\Movie.cpp
 CMakeFiles\CourseWork2.dir\Movie.cpp.obj: ..\Movie.h
 
+CMakeFiles\CourseWork2.dir\MovieDatabase.cpp.obj: ..\Movie.h
 CMakeFiles\CourseWork2.dir\MovieDatabase.cpp.obj: ..\MovieDatabase.cpp
 CMakeFiles\CourseWork2.dir\MovieDatabase.cpp.obj: ..\MovieDatabase.h
 

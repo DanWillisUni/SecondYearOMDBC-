@@ -2,16 +2,14 @@
 // Created by danny on 03/04/2020.
 //
 
-#include <string>
-#include <iostream>
 #include "Movie.h"
 using namespace std;
 
-Movie::Movie(string title, int releaseYear, string certificate, string * genres, int duration, int averageRating) {//Constructor
+Movie::Movie(string title, int releaseYear, string certificate, string genres[], int duration, int averageRating) {//Constructor
     this->title = title;
     this->releaseYear = releaseYear;
     this->certificate = certificate;
-    this->genres = genres;
+    //this->genres = genres;
     this->duration = duration;
     this->averageRating = averageRating;
 }
@@ -30,9 +28,9 @@ int Movie::getReleaseYear(){
 string Movie::getCertificate(){
     return certificate;
 }
-string * Movie::getGenres(){
-    return genres;
-}
+//string* Movie::getGenres(){
+//    return genres;
+//}
 int Movie::getDuration(){
     return duration;
 }
@@ -41,9 +39,11 @@ int Movie::getAverageRating(){
 }
 
 string Movie::getGenreString(){
-    string * gen = getGenres();
+    //string* allGenres = new string[0];
+    //allGenres = getGenres();
     //for each item in array
     //add '/' inbetween them
+    return "theGenres";
 }
 void Movie::print(){
     cout << getTitle() << ", " << to_string(getReleaseYear()) << ", " << getCertificate() << ", " << getGenreString() <<  ", " << to_string(getDuration()) << ", " << to_string(getAverageRating()) << endl;
