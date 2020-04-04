@@ -14,7 +14,8 @@ private:
     int duration;//duration of the film in minutes
     int averageRating;//average viewer rating
 public:
-    Movie(char * title,int releaseYear,char * certificate,std::string genres,int duration,int averageRating);
+    Movie(char * title,int releaseYear,char * certificate,std::string * genres,int duration,int averageRating);
+    Movie(std::string line);
     char * getTitle();
     int getReleaseYear();
     char * getCertificate();

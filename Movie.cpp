@@ -6,14 +6,18 @@
 #include "Movie.h"
 using namespace std;
 
-Movie::Movie(char * title, int releaseYear, char * certificate, string genres, int duration, int averageRating) {//Constructor
+Movie::Movie(char * title, int releaseYear, char * certificate, string * genres, int duration, int averageRating) {//Constructor
     this->title = title;
     this->releaseYear = releaseYear;
     this->certificate = certificate;
-    //splitting the genres up
-    //this->genres = ;
+    this->genres = genres;
     this->duration = duration;
     this->averageRating = averageRating;
+}
+Movie::Movie(string line){
+    //split the line by ','
+    //remove quotes from title, certificate, genres
+    //split genres by '/'
 }
 //accessor methods
 char * Movie::getTitle(){
