@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/danny/CLionProjects/CourseWork2/Movie.cpp
+Movie.h
+C:/Users/danny/CLionProjects/CourseWork2/Movie.h
+
 C:/Users/danny/CLionProjects/CourseWork2/Movie.h
 string
 -
@@ -19,6 +23,16 @@ C:/Users/danny/CLionProjects/CourseWork2/MovieDatabase.h
 C:/Users/danny/CLionProjects/CourseWork2/MovieDatabase.h
 string
 -
+vector
+-
 Movie.h
 C:/Users/danny/CLionProjects/CourseWork2/Movie.h
+
+C:/Users/danny/CLionProjects/CourseWork2/main.cpp
+iostream
+-
+Movie.h
+C:/Users/danny/CLionProjects/CourseWork2/Movie.h
+MovieDatabase.h
+C:/Users/danny/CLionProjects/CourseWork2/MovieDatabase.h
 

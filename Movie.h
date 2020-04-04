@@ -9,12 +9,12 @@
 using namespace std;
 class Movie{
 private:
-    string title; //title of the movie
-    int releaseYear;//year of release of the movie
-    string certificate;//certificate of who can watch the movie
-    string genres;//genres the movie fits into
-    int duration;//duration of the film in minutes
-    int averageRating;//average viewer rating
+    string m_title; //title of the movie
+    int m_releaseYear;//year of release of the movie
+    string m_certificate;//certificate of who can watch the movie
+    string m_genres;//genres the movie fits into
+    int m_duration;//duration of the film in minutes
+    int m_averageRating;//average viewer rating
 public:
     Movie(string title,int releaseYear,string certificate,string genres,int duration,int averageRating);
     Movie(string line);

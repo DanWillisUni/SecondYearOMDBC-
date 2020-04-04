@@ -6,35 +6,35 @@
 using namespace std;
 
 Movie::Movie(string title, int releaseYear, string certificate, string genres, int duration, int averageRating) {//Constructor
-    this->title = title;
-    this->releaseYear = releaseYear;
-    this->certificate = certificate;
-    this->genres = genres;
-    this->duration = duration;
-    this->averageRating = averageRating;
+    m_title = title;
+    m_releaseYear = releaseYear;
+    m_certificate = certificate;
+    m_genres = genres;
+    m_duration = duration;
+    m_averageRating = averageRating;
 }
 Movie::Movie(string line){
     //split the line by ','
-    //remove quotes from title, certificate, genres
+    //remove quotes from m_title, certificate, genres
 }
 //accessor methods
 string Movie::getTitle(){
-    return title;
+    return m_title;
 }
 int Movie::getReleaseYear(){
-    return releaseYear;
+    return m_releaseYear;
 }
 string Movie::getCertificate(){
-    return certificate;
+    return m_certificate;
 }
 string Movie::getGenres(){
-    return genres;
+    return m_genres;
 }
 int Movie::getDuration(){
-    return duration;
+    return m_duration;
 }
 int Movie::getAverageRating(){
-    return averageRating;
+    return m_averageRating;
 }
 
 bool Movie::hasGenre(string genreToMatch){
