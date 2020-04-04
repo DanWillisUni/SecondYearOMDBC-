@@ -5,9 +5,7 @@
 #include "MovieDatabase.h"
 
 //MovieDatabase::MovieDatabase(Movie db[]){
-//    //create new db from first element
-//    //for each element except first
-//    //add to db
+//    this->db = *db;
 //}
 //MovieDatabase::MovieDatabase(string fileName){
 //    //read in the file
