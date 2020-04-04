@@ -3,10 +3,11 @@
 //
 
 #include <string>
+#include <iostream>
 #include "Movie.h"
 using namespace std;
 
-Movie::Movie(char * title, int releaseYear, char * certificate, string * genres, int duration, int averageRating) {//Constructor
+Movie::Movie(string title, int releaseYear, string certificate, string * genres, int duration, int averageRating) {//Constructor
     this->title = title;
     this->releaseYear = releaseYear;
     this->certificate = certificate;
@@ -20,13 +21,13 @@ Movie::Movie(string line){
     //split genres by '/'
 }
 //accessor methods
-char * Movie::getTitle(){
+string Movie::getTitle(){
     return title;
 }
 int Movie::getReleaseYear(){
     return releaseYear;
 }
-char * Movie::getCertificate(){
+string Movie::getCertificate(){
     return certificate;
 }
 string * Movie::getGenres(){
@@ -38,6 +39,17 @@ int Movie::getDuration(){
 int Movie::getAverageRating(){
     return averageRating;
 }
+
+string Movie::getGenreString(){
+    string * gen = getGenres();
+    //for each item in array
+    //add '/' inbetween them
+}
+void Movie::print(){
+    cout << getTitle() << ", " << to_string(getReleaseYear()) << ", " << getCertificate() << ", " << getGenreString() <<  ", " << to_string(getDuration()) << ", " << to_string(getAverageRating()) << endl;
+}
+
+
 
 
 
