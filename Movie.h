@@ -1,6 +1,7 @@
 //
 // Created by danny on 03/04/2020.
 //
+#include <vector>
 #include <string>
 #include <iostream>
 
@@ -15,6 +16,7 @@ private:
     string m_genres;//genres the movie fits into
     int m_duration;//duration of the film in minutes
     int m_averageRating;//average viewer rating
+    vector<string> splitString(const string& str, const string& seperator);
 public:
     Movie(string title,int releaseYear,string certificate,string genres,int duration,int averageRating);
     Movie(string line);

@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/CourseWork2.dir/main.cpp.o CMakeFiles/CourseWork2.dir/Movie.cpp.o CMakeFiles/CourseWork2.dir/MovieDatabase.cpp.o  -o CourseWork2.exe -Wl,--out-implib,libCourseWork2.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

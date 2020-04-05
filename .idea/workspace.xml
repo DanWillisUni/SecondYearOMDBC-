@@ -17,16 +17,17 @@
       <change beforePath="$PROJECT_DIR$/Movie.h" beforeDir="false" afterPath="$PROJECT_DIR$/Movie.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MovieDatabase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDatabase.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MovieDatabase.h" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDatabase.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeCXXCompiler.cmake" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/Movie.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/Movie.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/MovieDatabase.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/MovieDatabase.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/Movie.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/MovieDatabase.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/main.cpp.obj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/vc140.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/vc140.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CourseWork2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CourseWork2.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CourseWork2.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CourseWork2.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CourseWork2.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CourseWork2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CourseWork2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CourseWork2.pdb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +52,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main.cpp" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
   </component>
   <component name="RunManager">
     <configuration name="CourseWork2" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CourseWork2" TARGET_NAME="CourseWork2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CourseWork2" RUN_TARGET_NAME="CourseWork2">
@@ -70,7 +74,10 @@
       <option name="presentableId" value="Default" />
       <updated>1584011639958</updated>
       <workItem from="1584011643916" duration="2475000" />
-      <workItem from="1585928321394" duration="21397000" />
+      <workItem from="1585928321394" duration="26708000" />
+      <workItem from="1586107040659" duration="2120000" />
+      <workItem from="1586109190428" duration="14000" />
+      <workItem from="1586109613196" duration="178000" />
     </task>
     <servers />
   </component>
@@ -78,26 +85,42 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1236" height="176" key="GridCell.Tab.0.bottom" timestamp="1586015739709">
+    <state x="96" y="16" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586107763619">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="176" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1586015739709" />
-    <state width="1236" height="176" key="GridCell.Tab.0.center" timestamp="1586015739709">
+    <state x="96" y="16" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.720@0.0.1280.720" timestamp="1586107763619" />
+    <state x="469" y="204" key="#com.intellij.ide.actions.DebugLogConfigureAction" timestamp="1586090228003">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="176" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1586015739709" />
-    <state width="1236" height="176" key="GridCell.Tab.0.left" timestamp="1586015739708">
+    <state x="469" y="204" key="#com.intellij.ide.actions.DebugLogConfigureAction/0.0.1280.720@0.0.1280.720" timestamp="1586090228003" />
+    <state x="420" y="115" key="FileChooserDialogImpl" timestamp="1586109722558">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="176" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1586015739708" />
-    <state width="1236" height="176" key="GridCell.Tab.0.right" timestamp="1586015739709">
+    <state x="420" y="115" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1586109722558" />
+    <state width="1236" height="176" key="GridCell.Tab.0.bottom" timestamp="1586109861944">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="176" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1586015739709" />
-    <state x="336" y="184" key="com.intellij.ide.util.TipDialog" timestamp="1585928498611">
+    <state width="1236" height="176" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1586109861944" />
+    <state width="1236" height="176" key="GridCell.Tab.0.center" timestamp="1586109861944">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="336" y="184" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1585928498611" />
+    <state width="1236" height="176" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1586109861944" />
+    <state width="1236" height="176" key="GridCell.Tab.0.left" timestamp="1586109861944">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1236" height="176" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1586109861944" />
+    <state width="1236" height="176" key="GridCell.Tab.0.right" timestamp="1586109861944">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1236" height="176" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1586109861944" />
+    <state x="142" y="3" key="SettingsEditor" timestamp="1586109791703">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="142" y="3" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1586109791703" />
+    <state x="336" y="184" key="com.intellij.ide.util.TipDialog" timestamp="1586109614891">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="336" y="184" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1586109614891" />
     <state x="367" y="3" key="refactoring.ChangeSignatureDialog" timestamp="1586005449733">
       <screen x="0" y="0" width="1280" height="720" />
     </state>

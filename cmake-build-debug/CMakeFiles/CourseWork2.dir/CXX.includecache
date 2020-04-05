@@ -6,33 +6,37 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/danny/CLionProjects/CourseWork2/Movie.cpp
+/cygdrive/c/Users/danny/CLionProjects/CourseWork2/Movie.cpp
 Movie.h
-C:/Users/danny/CLionProjects/CourseWork2/Movie.h
+/cygdrive/c/Users/danny/CLionProjects/CourseWork2/Movie.h
 
-C:/Users/danny/CLionProjects/CourseWork2/Movie.h
+/cygdrive/c/Users/danny/CLionProjects/CourseWork2/Movie.h
+vector
+-
 string
 -
 iostream
 -
 
-C:/Users/danny/CLionProjects/CourseWork2/MovieDatabase.cpp
+/cygdrive/c/Users/danny/CLionProjects/CourseWork2/MovieDatabase.cpp
 MovieDatabase.h
-C:/Users/danny/CLionProjects/CourseWork2/MovieDatabase.h
+/cygdrive/c/Users/danny/CLionProjects/CourseWork2/MovieDatabase.h
 
-C:/Users/danny/CLionProjects/CourseWork2/MovieDatabase.h
+/cygdrive/c/Users/danny/CLionProjects/CourseWork2/MovieDatabase.h
 string
 -
 vector
 -
+fstream
+-
 Movie.h
-C:/Users/danny/CLionProjects/CourseWork2/Movie.h
+/cygdrive/c/Users/danny/CLionProjects/CourseWork2/Movie.h
 
-C:/Users/danny/CLionProjects/CourseWork2/main.cpp
+/cygdrive/c/Users/danny/CLionProjects/CourseWork2/main.cpp
 iostream
 -
 Movie.h
-C:/Users/danny/CLionProjects/CourseWork2/Movie.h
+/cygdrive/c/Users/danny/CLionProjects/CourseWork2/Movie.h
 MovieDatabase.h
-C:/Users/danny/CLionProjects/CourseWork2/MovieDatabase.h
+/cygdrive/c/Users/danny/CLionProjects/CourseWork2/MovieDatabase.h
 

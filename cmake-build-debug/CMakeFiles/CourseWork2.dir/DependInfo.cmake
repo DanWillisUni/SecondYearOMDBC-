@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/danny/CLionProjects/CourseWork2/Movie.cpp" "C:/Users/danny/CLionProjects/CourseWork2/cmake-build-debug/CMakeFiles/CourseWork2.dir/Movie.cpp.obj"
-  "C:/Users/danny/CLionProjects/CourseWork2/MovieDatabase.cpp" "C:/Users/danny/CLionProjects/CourseWork2/cmake-build-debug/CMakeFiles/CourseWork2.dir/MovieDatabase.cpp.obj"
-  "C:/Users/danny/CLionProjects/CourseWork2/main.cpp" "C:/Users/danny/CLionProjects/CourseWork2/cmake-build-debug/CMakeFiles/CourseWork2.dir/main.cpp.obj"
+  "/cygdrive/c/Users/danny/CLionProjects/CourseWork2/Movie.cpp" "/cygdrive/c/Users/danny/CLionProjects/CourseWork2/cmake-build-debug/CMakeFiles/CourseWork2.dir/Movie.cpp.o"
+  "/cygdrive/c/Users/danny/CLionProjects/CourseWork2/MovieDatabase.cpp" "/cygdrive/c/Users/danny/CLionProjects/CourseWork2/cmake-build-debug/CMakeFiles/CourseWork2.dir/MovieDatabase.cpp.o"
+  "/cygdrive/c/Users/danny/CLionProjects/CourseWork2/main.cpp" "/cygdrive/c/Users/danny/CLionProjects/CourseWork2/cmake-build-debug/CMakeFiles/CourseWork2.dir/main.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "MSVC")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

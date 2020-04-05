@@ -14,8 +14,14 @@ Movie::Movie(string title, int releaseYear, string certificate, string genres, i
     m_averageRating = averageRating;
 }
 Movie::Movie(string line){
-    //split the line by ','
-    //remove quotes from m_title, certificate, genres
+    vector<string> lineSplit = splitString(line,",");
+    //remove quotes from title, certificate, genres
+    m_title = lineSplit[0].substr(1, lineSplit[0].size() - 2);
+    m_releaseYear = stoi(lineSplit[1]);
+    m_certificate = lineSplit[2].substr(1, lineSplit[2].size() - 2);
+    m_genres = lineSplit[3].substr(1, lineSplit[3].size() - 2);
+    m_duration = stoi(lineSplit[4]);
+    m_averageRating = stoi(lineSplit[5]);
 }
 //accessor methods
 string Movie::getTitle(){
@@ -43,6 +49,23 @@ bool Movie::hasGenre(string genreToMatch){
 }
 void Movie::print(){
     cout << getTitle() << ", " << to_string(getReleaseYear()) << ", " << getCertificate() << ", " << getGenres() <<  ", " << to_string(getDuration()) << ", " << to_string(getAverageRating()) << endl;
+}
+
+vector<string> Movie::splitString(const string& str, const string& seperator) {
+    vector<string> parts;
+    size_t pos = 0;
+    while (true) {
+        size_t newPos = str.find(seperator, pos);
+        if (newPos == std::string::npos) {
+            // No more seperators
+            parts.push_back(str.substr(pos));
+            break;
+        }
+        // Found seperator at newPos
+        parts.push_back(str.substr(pos, newPos - pos));
+        pos = newPos + seperator.length();
+    }
+    return parts;
 }
 
 

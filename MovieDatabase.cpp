@@ -4,13 +4,15 @@
 
 #include "MovieDatabase.h"
 
-//MovieDatabase::MovieDatabase(Movie db[]){
-//    this->db = *db;
-//}
-//MovieDatabase::MovieDatabase(string fileName){
-//    //read in the file
-//    //for each line create new movie and add it to the database
-//}
+MovieDatabase::MovieDatabase(string fileName){
+    ifstream file(fileName);
+    string str;
+    MovieDatabase();
+    while (getline(file, str)) {
+        cout << str << endl;
+        add(Movie(str));
+    }
+}
 MovieDatabase::MovieDatabase():m_db(){
 }
 
