@@ -18,6 +18,7 @@ public:
     MovieDatabase();
     void add(Movie m);
     void print();
+    void sortByReleaseYear();
 };
 
 #endif //COURSEWORK2_MOVIEDATABASE_H

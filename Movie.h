@@ -28,5 +28,8 @@ public:
     int getAverageRating();
     bool hasGenre(string genreToMatch);
     void print();
+    bool operator< (Movie other) const {
+        return m_releaseYear < other.getReleaseYear();
+    }
 };
 #endif //COURSEWORK2_MOVIE_H

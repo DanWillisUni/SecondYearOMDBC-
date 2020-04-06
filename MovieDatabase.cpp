@@ -23,3 +23,6 @@ void MovieDatabase::print(){
         m.print();
     }
 }
+void MovieDatabase::sortByReleaseYear(){
+    sort(m_db.begin(),m_db.end());
+}

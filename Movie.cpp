@@ -48,7 +48,7 @@ bool Movie::hasGenre(string genreToMatch){
     return false;
 }
 void Movie::print(){
-    cout << getTitle() << ", " << to_string(getReleaseYear()) << ", " << getCertificate() << ", " << getGenres() <<  ", " << to_string(getDuration()) << ", " << to_string(getAverageRating()) << endl;
+    cout << "\"" << getTitle() << "\", " << to_string(getReleaseYear()) << ", \"" << getCertificate() << "\", \"" << getGenres() <<  "\", " << to_string(getDuration()) << ", " << to_string(getAverageRating()) << endl;
 }
 
 vector<string> Movie::splitString(const string& str, const string& seperator) {
