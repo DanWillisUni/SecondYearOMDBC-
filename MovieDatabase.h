@@ -12,21 +12,21 @@ using namespace std;
 #define COURSEWORK2_MOVIEDATABASE_H
 class MovieDatabase{
 private:
-    vector<Movie> m_db;
+    vector<Movie> m_db;//vector of movies in the database
 public:
-    MovieDatabase(string fileName);
-    MovieDatabase();
-    void add(Movie m);
-    void print();
-    Movie get(int i);
-    int size();
+    MovieDatabase(string fileName);//constructor from file name
+    MovieDatabase();//constructor of empty database
+    void add(Movie m);//add a movie
+    void print();//print the entire database
+    Movie get(int i);//get a movie in position i
+    int size();//the size of the database
 
-    void sortByTitleLength();
-    void sortByReleaseYear();
-    MovieDatabase filterByCertificate(string certificateToMatch);
-    MovieDatabase filterByGenre(string genreToMatch);
-    void sortByDuration();
-    void sortByAverageRating();
+    void sortByTitleLength();//sorts the database by titlelength
+    void sortByReleaseYear();//sorts the movies by release year
+    MovieDatabase filterByCertificate(string certificateToMatch);//gives a new database of movies with a specific certificate
+    MovieDatabase filterByGenre(string genreToMatch);//gives a new database with all the movies that have a specific genre
+    void sortByDuration();//sorts the database by duration
+    void sortByAverageRating();//sorts the database by average rating
 };
 
 #endif //COURSEWORK2_MOVIEDATABASE_H
