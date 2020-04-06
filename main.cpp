@@ -4,7 +4,6 @@
 
 int main() {
     MovieDatabase database = MovieDatabase("../films.txt");
-    cout << "Printing database:" << endl;
     database.print();
     database.sortByReleaseYear();
     database.print();

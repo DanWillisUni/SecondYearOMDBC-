@@ -28,8 +28,10 @@ public:
     int getAverageRating();
     bool hasGenre(string genreToMatch);
     void print();
-    bool operator< (Movie other) const {
-        return m_releaseYear < other.getReleaseYear();
-    }
+    struct cmpReleaseYear {
+        bool operator () (Movie a,Movie b) const {
+            return a.getReleaseYear() < b.getReleaseYear();
+        }
+    };
 };
 #endif //COURSEWORK2_MOVIE_H

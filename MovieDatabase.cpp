@@ -19,10 +19,11 @@ void MovieDatabase::add(Movie m) {
     m_db.push_back(m);
 }
 void MovieDatabase::print(){
+    cout << "Printing database:" << endl;
     for(auto m: m_db){
         m.print();
     }
 }
 void MovieDatabase::sortByReleaseYear(){
-    sort(m_db.begin(),m_db.end());
+    sort(m_db.begin(),m_db.end(),Movie::cmpReleaseYear());
 }
