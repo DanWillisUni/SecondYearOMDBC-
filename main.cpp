@@ -1,21 +1,16 @@
-#include <iostream>
 #include "Movie.h"
 #include "MovieDatabase.h"
 
 int main() {
     MovieDatabase database = MovieDatabase("../films.txt");
-    database.print();
     database.sortByReleaseYear();
     database.print();
+    MovieDatabase filmNoir = database.filterByGenre("Film-Noir");
+    filmNoir.sortByDuration();
+    filmNoir.get(2).print();
+    MovieDatabase unratedFilms = database.filterByCertificate("UNRATED");
+    unratedFilms.get(unratedFilms.size()-8).print();
     database.sortByTitleLength();
-    database.print();
-    database.sortByDuration();
-    database.print();
-    database.sortByAverageRating();
-    database.print();
-    database = database.filterByGenre("Comedy");
-    database.print();
-    database = database.filterByCertificate("R");
-    database.print();
+    database.get(0).print();
     return 0;
 }

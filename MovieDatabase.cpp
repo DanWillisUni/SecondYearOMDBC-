@@ -25,7 +25,10 @@ void MovieDatabase::print(){
     }
 }
 Movie MovieDatabase::get(int i){
-
+    return m_db.at(i);
+}
+int MovieDatabase::size(){
+    return m_db.size();
 }
 
 void MovieDatabase::sortByTitleLength(){

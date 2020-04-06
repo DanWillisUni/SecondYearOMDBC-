@@ -35,17 +35,17 @@ public:
     };
     struct cmpTitleLength {
         bool operator () (Movie a,Movie b) const {
-            return a.getTitle().length() < b.getTitle().length();
+            return a.getTitle().length() > b.getTitle().length();
         }
     };
     struct cmpDuration {
         bool operator () (Movie a,Movie b) const {
-            return a.getDuration() < b.getDuration();
+            return a.getDuration() > b.getDuration();
         }
     };
     struct cmpAverageRating {
         bool operator () (Movie a,Movie b) const {
-            return a.getAverageRating() < b.getAverageRating();
+            return a.getAverageRating() > b.getAverageRating();
         }
     };
 };

@@ -19,6 +19,7 @@ public:
     void add(Movie m);
     void print();
     Movie get(int i);
+    int size();
 
     void sortByTitleLength();
     void sortByReleaseYear();
