@@ -24,11 +24,24 @@ void MovieDatabase::print(){
         m.print();
     }
 }
+Movie MovieDatabase::get(int i){
+
+}
+
+void MovieDatabase::sortByTitleLength(){
+    sort(m_db.begin(),m_db.end(),Movie::cmpTitleLength());
+}
 void MovieDatabase::sortByReleaseYear(){
     sort(m_db.begin(),m_db.end(),Movie::cmpReleaseYear());
 }
-void MovieDatabase::sortByTitleLength(){
-    sort(m_db.begin(),m_db.end(),Movie::cmpTitleLength());
+MovieDatabase MovieDatabase::filterByCertificate(string certificateToMatch){
+    MovieDatabase newdb = MovieDatabase();
+    for(auto m: m_db){
+        if (m.getCertificate() == certificateToMatch){
+            newdb.add(m);
+        }
+    }
+    return newdb;
 }
 MovieDatabase MovieDatabase::filterByGenre(string genreToMatch){
     MovieDatabase newdb = MovieDatabase();
@@ -38,4 +51,10 @@ MovieDatabase MovieDatabase::filterByGenre(string genreToMatch){
         }
     }
     return newdb;
+}
+void MovieDatabase::sortByDuration(){
+    sort(m_db.begin(),m_db.end(),Movie::cmpDuration());
+}
+void MovieDatabase::sortByAverageRating() {
+    sort(m_db.begin(),m_db.end(),Movie::cmpAverageRating());
 }

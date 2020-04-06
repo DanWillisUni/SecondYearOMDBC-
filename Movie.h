@@ -38,5 +38,15 @@ public:
             return a.getTitle().length() < b.getTitle().length();
         }
     };
+    struct cmpDuration {
+        bool operator () (Movie a,Movie b) const {
+            return a.getDuration() < b.getDuration();
+        }
+    };
+    struct cmpAverageRating {
+        bool operator () (Movie a,Movie b) const {
+            return a.getAverageRating() < b.getAverageRating();
+        }
+    };
 };
 #endif //COURSEWORK2_MOVIE_H

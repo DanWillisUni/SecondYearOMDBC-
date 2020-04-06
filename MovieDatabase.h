@@ -18,9 +18,14 @@ public:
     MovieDatabase();
     void add(Movie m);
     void print();
-    void sortByReleaseYear();
+    Movie get(int i);
+
     void sortByTitleLength();
+    void sortByReleaseYear();
+    MovieDatabase filterByCertificate(string certificateToMatch);
     MovieDatabase filterByGenre(string genreToMatch);
+    void sortByDuration();
+    void sortByAverageRating();
 };
 
 #endif //COURSEWORK2_MOVIEDATABASE_H
