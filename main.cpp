@@ -5,7 +5,11 @@
 int main() {
     MovieDatabase database = MovieDatabase("../films.txt");
     database.print();
-    database.sortByReleaseYear();
+//    database.sortByReleaseYear();
+//    database.print();
+//    database.sortByTitleLength();
+//    database.print();
+    database = database.filterByGenre("Comedy");
     database.print();
     return 0;
 }

@@ -19,6 +19,8 @@ public:
     void add(Movie m);
     void print();
     void sortByReleaseYear();
+    void sortByTitleLength();
+    MovieDatabase filterByGenre(string genreToMatch);
 };
 
 #endif //COURSEWORK2_MOVIEDATABASE_H

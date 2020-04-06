@@ -44,8 +44,8 @@ int Movie::getAverageRating(){
 }
 
 bool Movie::hasGenre(string genreToMatch){
-    //check if genreToMatch is in the genre String
-    return false;
+    vector<string> genreSplit = splitString(m_genres,genreToMatch);
+    return(genreSplit.size()>1);
 }
 void Movie::print(){
     cout << "\"" << getTitle() << "\", " << to_string(getReleaseYear()) << ", \"" << getCertificate() << "\", \"" << getGenres() <<  "\", " << to_string(getDuration()) << ", " << to_string(getAverageRating()) << endl;

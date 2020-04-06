@@ -33,5 +33,10 @@ public:
             return a.getReleaseYear() < b.getReleaseYear();
         }
     };
+    struct cmpTitleLength {
+        bool operator () (Movie a,Movie b) const {
+            return a.getTitle().length() < b.getTitle().length();
+        }
+    };
 };
 #endif //COURSEWORK2_MOVIE_H

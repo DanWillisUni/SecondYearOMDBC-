@@ -27,3 +27,15 @@ void MovieDatabase::print(){
 void MovieDatabase::sortByReleaseYear(){
     sort(m_db.begin(),m_db.end(),Movie::cmpReleaseYear());
 }
+void MovieDatabase::sortByTitleLength(){
+    sort(m_db.begin(),m_db.end(),Movie::cmpTitleLength());
+}
+MovieDatabase MovieDatabase::filterByGenre(string genreToMatch){
+    MovieDatabase newdb = MovieDatabase();
+    for(auto m: m_db){
+        if (m.hasGenre(genreToMatch)){
+            newdb.add(m);
+        }
+    }
+    return newdb;
+}
