@@ -14,14 +14,14 @@ Movie::Movie(string title, int releaseYear, string certificate, string genres, i
     m_averageRating = averageRating;
 }
 Movie::Movie(string line){
-    vector<string> lineSplit = splitString(line,",");
-    //remove quotes from title, certificate, genres
-    m_title = lineSplit[0].substr(1, lineSplit[0].size() - 2);
-    m_releaseYear = stoi(lineSplit[1]);
-    m_certificate = lineSplit[2].substr(1, lineSplit[2].size() - 2);
-    m_genres = lineSplit[3].substr(1, lineSplit[3].size() - 2);
-    m_duration = stoi(lineSplit[4]);
-    m_averageRating = stoi(lineSplit[5]);
+    vector<string> lineSplit = splitString(line,"\"");
+    m_title = lineSplit[1];
+    m_releaseYear = stoi(lineSplit[2].substr(1,lineSplit[2].size() - 2));
+    m_certificate = lineSplit[3];
+    m_genres = lineSplit[5];
+    vector<string> runtimeAndRatingSplit = splitString(lineSplit[6],",");
+    m_duration = stoi(runtimeAndRatingSplit[1]);
+    m_averageRating = stoi(runtimeAndRatingSplit[2]);
 }
 //accessor methods
 string Movie::getTitle(){

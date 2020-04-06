@@ -9,7 +9,6 @@ MovieDatabase::MovieDatabase(string fileName){
     string str;
     MovieDatabase();
     while (getline(file, str)) {
-        cout << str << endl;
         add(Movie(str));
     }
 }
