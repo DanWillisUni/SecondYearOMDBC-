@@ -21,33 +21,13 @@ private:
 public:
     Movie(string title,int releaseYear,string certificate,string genres,int duration,int averageRating);
     Movie(string line);
-    string getTitle();
-    int getReleaseYear();
-    string getCertificate();
-    string getGenres();
-    int getDuration();
-    int getAverageRating();
+    string getTitle() const;
+    int getReleaseYear() const;
+    string getCertificate() const;
+    string getGenres() const;
+    int getDuration() const;
+    int getAverageRating() const;
     bool hasGenre(string genreToMatch);
     void print();
-    struct cmpReleaseYear {
-        bool operator () (Movie a,Movie b) const {
-            return a.getReleaseYear() < b.getReleaseYear();
-        }
-    };
-    struct cmpTitleLength {
-        bool operator () (Movie a,Movie b) const {
-            return a.getTitle().length() > b.getTitle().length();
-        }
-    };
-    struct cmpDuration {
-        bool operator () (Movie a,Movie b) const {
-            return a.getDuration() > b.getDuration();
-        }
-    };
-    struct cmpAverageRating {
-        bool operator () (Movie a,Movie b) const {
-            return a.getAverageRating() > b.getAverageRating();
-        }
-    };
 };
 #endif //COURSEWORK2_MOVIE_H

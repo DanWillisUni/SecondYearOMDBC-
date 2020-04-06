@@ -24,22 +24,22 @@ Movie::Movie(string line){
     m_averageRating = stoi(runtimeAndRatingSplit[2]);
 }
 //accessor methods
-string Movie::getTitle(){
+string Movie::getTitle() const{
     return m_title;
 }
-int Movie::getReleaseYear(){
+int Movie::getReleaseYear() const{
     return m_releaseYear;
 }
-string Movie::getCertificate(){
+string Movie::getCertificate() const{
     return m_certificate;
 }
-string Movie::getGenres(){
+string Movie::getGenres() const{
     return m_genres;
 }
-int Movie::getDuration(){
+int Movie::getDuration() const{
     return m_duration;
 }
-int Movie::getAverageRating(){
+int Movie::getAverageRating() const{
     return m_averageRating;
 }
 

@@ -29,12 +29,25 @@ Movie MovieDatabase::get(int i){
 int MovieDatabase::size(){
     return m_db.size();
 }
-
+namespace {
+    bool CompareMoviesByTitleLength(const Movie& a, const Movie& b) {
+        return (a.getTitle().length() > b.getTitle().length());
+    }
+    bool CompareMoviesByReleaseYear(const Movie& a, const Movie& b) {
+        return (a.getReleaseYear() < b.getReleaseYear());
+    }
+    bool CompareMoviesByDuration(const Movie& a, const Movie& b) {
+        return (a.getDuration() > b.getDuration());
+    }
+    bool CompareMoviesByAverageRating(const Movie& a, const Movie& b) {
+        return (a.getAverageRating() > b.getAverageRating());
+    }
+}
 void MovieDatabase::sortByTitleLength(){
-    sort(m_db.begin(),m_db.end(),Movie::cmpTitleLength());
+    sort(m_db.begin(),m_db.end(),CompareMoviesByTitleLength);
 }
 void MovieDatabase::sortByReleaseYear(){
-    sort(m_db.begin(),m_db.end(),Movie::cmpReleaseYear());
+    sort(m_db.begin(),m_db.end(),CompareMoviesByReleaseYear);
 }
 MovieDatabase MovieDatabase::filterByCertificate(string certificateToMatch){
     MovieDatabase newdb = MovieDatabase();
@@ -55,8 +68,8 @@ MovieDatabase MovieDatabase::filterByGenre(string genreToMatch){
     return newdb;
 }
 void MovieDatabase::sortByDuration(){
-    sort(m_db.begin(),m_db.end(),Movie::cmpDuration());
+    sort(m_db.begin(),m_db.end(),CompareMoviesByDuration);
 }
 void MovieDatabase::sortByAverageRating() {
-    sort(m_db.begin(),m_db.end(),Movie::cmpAverageRating());
+    sort(m_db.begin(),m_db.end(),CompareMoviesByAverageRating);
 }
