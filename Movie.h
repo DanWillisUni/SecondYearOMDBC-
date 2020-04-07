@@ -17,7 +17,7 @@ private:
     string m_genres;//genres the movie fits into
     int m_duration;//duration of the film in minutes
     int m_averageRating;//average viewer rating
-    vector<string> splitString(const string& str, const string& seperator);
+    vector<string> splitString(const string& str, const string& seperator); //split string function
 public:
     Movie(string title,int releaseYear,string certificate,string genres,int duration,int averageRating);
     Movie(string line);
@@ -29,10 +29,11 @@ public:
     int getAverageRating() const;
     bool hasGenre(string genreToMatch);
     void print();
-    bool operator< (Movie other) const {
+
+    bool operator< (Movie other) const {//overrides the less than operator
         return this->getReleaseYear() < other.getReleaseYear();
     }
-    struct CompareMoviesByDuration {
+    struct CompareMoviesByDuration { //struct used to compare movies by duration
         bool operator () (Movie a,Movie b) const {
             return a.getDuration() > b.getDuration();
         }
