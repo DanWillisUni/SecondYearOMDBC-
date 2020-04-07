@@ -13,13 +13,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c63bb631-71a1-46e7-8875-48030a3d744e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Movie.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Movie.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Movie.h" beforeDir="false" afterPath="$PROJECT_DIR$/Movie.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MovieDatabase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDatabase.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/Movie.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/Movie.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/MovieDatabase.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/MovieDatabase.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CourseWork2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CourseWork2.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +65,8 @@
       <workItem from="1586107040659" duration="2120000" />
       <workItem from="1586109190428" duration="14000" />
       <workItem from="1586109613196" duration="14264000" />
-      <workItem from="1586211631237" duration="948000" />
+      <workItem from="1586211631237" duration="1142000" />
+      <workItem from="1586249152273" duration="1280000" />
     </task>
     <servers />
   </component>
@@ -90,22 +86,22 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="420" y="115" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1586109722558" />
-    <state width="1236" height="220" key="GridCell.Tab.0.bottom" timestamp="1586208516171">
+    <state width="1236" height="176" key="GridCell.Tab.0.bottom" timestamp="1586250434768">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="220" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1586208516171" />
-    <state width="1236" height="220" key="GridCell.Tab.0.center" timestamp="1586208516169">
+    <state width="1236" height="176" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1586250434768" />
+    <state width="1236" height="176" key="GridCell.Tab.0.center" timestamp="1586250434768">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="220" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1586208516169" />
-    <state width="1236" height="220" key="GridCell.Tab.0.left" timestamp="1586208516169">
+    <state width="1236" height="176" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1586250434768" />
+    <state width="1236" height="176" key="GridCell.Tab.0.left" timestamp="1586250434768">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="220" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1586208516169" />
-    <state width="1236" height="220" key="GridCell.Tab.0.right" timestamp="1586208516171">
+    <state width="1236" height="176" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1586250434768" />
+    <state width="1236" height="176" key="GridCell.Tab.0.right" timestamp="1586250434768">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="220" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1586208516171" />
+    <state width="1236" height="176" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1586250434768" />
     <state width="1236" height="220" key="GridCell.Tab.1.bottom" timestamp="1586208516171">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -126,10 +122,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="142" y="3" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1586109791703" />
-    <state x="336" y="184" key="com.intellij.ide.util.TipDialog" timestamp="1586211662488">
+    <state x="336" y="184" key="com.intellij.ide.util.TipDialog" timestamp="1586249154500">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="336" y="184" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1586211662488" />
+    <state x="336" y="184" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1586249154500" />
     <state x="367" y="3" key="refactoring.ChangeSignatureDialog" timestamp="1586190207176">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
