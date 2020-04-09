@@ -4,6 +4,19 @@
 
 #include "Movie.h"
 using namespace std;
+
+void Movie::tester(){
+    Movie a = Movie("Indiana Jones and the Last Crusade",1989,"PG-13","Action/Adventure/Fantasy",127,0);
+    Movie b = Movie("\"Aliens\",1986,\"R\",\"Action/Adventure/Sci-Fi\",137,0");
+    cout << "a: ";
+    cout << a;
+    cout << "b: ";
+    cout << b;
+    cout << "a has genre \"Action\": " << a.hasGenre("Action") << "\n";
+    cout << "b has genre \"Action\": " << b.hasGenre("Action")<< "\n";
+    cout << "a has genre \"Fantasy\": " << a.hasGenre("Fantasy")<< "\n";
+    cout << "b has genre \"Fantasy\": " << b.hasGenre("Fantasy")<< "\n";
+}
 /**
  * Unused Constructor
  * Constructs a movie from all the attributes passed in
@@ -68,14 +81,14 @@ bool Movie::hasGenre(string genreToMatch){
     return(genreSplit.size()>1);
 }
 /**
- * prints out the movie overloading the << opperator
+ * prints out the movie overloading the << operator
  * @param out output stream
  * @param m movie
  * @return the output stream full with the movie
  */
-ostream& operator<< (std::ostream &out, const Movie &m) {
-    out << "\"" << m.getTitle() << "\"," << to_string(m.getReleaseYear()) << ",\"" << m.getCertificate() << "\",\"" << m.getGenres() <<  "\"," << to_string(m.getDuration()) << "," << to_string(m.getAverageRating());
-    return out; // return std::ostream so we can chain calls to operator<<
+ostream& operator<< (ostream &out, const Movie &m) {
+    out << "\"" << m.getTitle() << "\"," << to_string(m.getReleaseYear()) << ",\"" << m.getCertificate() << "\",\"" << m.getGenres() <<  "\"," << to_string(m.getDuration()) << "," << to_string(m.getAverageRating()) << "\n";
+    return out; // returnostream so I can chain calls to operator<< used for the
 }
 /**
  * Splits the string to split on each seperator string

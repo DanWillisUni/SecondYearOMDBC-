@@ -2,7 +2,36 @@
 // Created by danny on 03/04/2020.
 //
 
+#include <algorithm>
 #include "MovieDatabase.h"
+
+void MovieDatabase::tester(){
+    MovieDatabase database = MovieDatabase("../films.txt");
+    cout << "In from file\n";
+    cout << database;
+    database.sortByReleaseYear();
+    cout << "Sorted by release year\n";
+    cout << database;
+    cout << "Size: " << database.size() << "\n";
+    database = database.filterByCertificate("PG");
+    cout << "Filter by Certificate \"PG\"\n";
+    cout << "Size: " << database.size() << "\n";
+    cout << database;
+    database.sortByTitleLength();
+    cout << "Sort by title length\n";
+    cout << database;
+    database = database.filterByGenre("Comedy");
+    cout << "filter by genre \"Comedy\"\n";
+    cout << "Size: " << database.size() << "\n";
+    cout << database;
+    database.sortByAverageRating();
+    cout << "Sort by average rating\n";
+    cout << database;
+    database.sortByDuration();
+    cout << "Sort by duration\n";
+    cout << database;
+    cout << "First (longest duration): " << database.get(0) << "\n";
+}
 /**
  * Constructor
  * reads in the file line by line
@@ -54,7 +83,7 @@ int MovieDatabase::size() const{
  */
 ostream& operator<< (std::ostream &out, const MovieDatabase &md) {
     for (auto const& m : md.m_db) {
-        out << m << "\n";
+        out << m;
     }
     return out; // return std::ostream so we can chain calls to operator<<
 }
@@ -126,16 +155,15 @@ MovieDatabase MovieDatabase::filterByGenre(string genreToMatch){
     return newdb;
 }
 /**
- * Sorts the database by duration of the movies, highest to lowest
+ * Sorts the database by duration of the movies
+ * Create a functor (i.e. a callable object) that implements operator()
+ * Such that when it is called it returns true if it's  first parameter
+ * should come before its second parameter
  * Uses a functor
  */
 void MovieDatabase::sortByDuration(){
-    // Create a functor (i.e. a callable object) that implements operator()
-    // such that when it is called it returns true if it's  first parameter
-    // should come before its second parameter
-    Movie::CompareMoviesByDuration compareFunctor;
-    // Call sort, passing the functor object as the third parameter
-    sort(m_db.begin(),m_db.end(), compareFunctor);
+    Movie::CompareMoviesByDuration compareFunctor; //Create a functor that implements operator()
+    sort(m_db.begin(),m_db.end(), compareFunctor);// Call sort, passing the functor object as the third parameter
 }
 /**
  * Unused in the code

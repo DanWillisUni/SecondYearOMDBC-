@@ -19,6 +19,7 @@ private:
     int m_averageRating;//average viewer rating
     vector<string> splitString(const string& str, const string& seperator); //split string function
 public:
+    static void tester();
     Movie(string title,int releaseYear,string certificate,string genres,int duration,int averageRating);
     Movie(string line);
     string getTitle() const;

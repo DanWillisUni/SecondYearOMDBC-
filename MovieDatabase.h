@@ -5,7 +5,6 @@
 #include <string>
 #include <vector>
 #include <fstream>
-#include <algorithm>
 
 #include "Movie.h"
 using namespace std;
@@ -15,6 +14,7 @@ class MovieDatabase{
 private:
     vector<Movie> m_db;//vector of movies in the database
 public:
+    static void tester();
     MovieDatabase(string fileName);//constructor from file name
     MovieDatabase();//constructor of empty database
     void add(Movie m);//add a movie
@@ -29,5 +29,4 @@ public:
     void sortByDuration();//sorts the database by duration
     void sortByAverageRating();//sorts the database by average rating
 };
-
 #endif //COURSEWORK2_MOVIEDATABASE_H
