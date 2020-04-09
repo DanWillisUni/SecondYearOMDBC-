@@ -68,11 +68,14 @@ bool Movie::hasGenre(string genreToMatch){
     return(genreSplit.size()>1);
 }
 /**
- * outputs to the console the movie
- * in the exact format it is in the films.txt file
+ * prints out the movie overloading the << opperator
+ * @param out output stream
+ * @param m movie
+ * @return the output stream full with the movie
  */
-void Movie::print() const{
-    cout << "\"" << getTitle() << "\"," << to_string(getReleaseYear()) << ",\"" << getCertificate() << "\",\"" << getGenres() <<  "\"," << to_string(getDuration()) << "," << to_string(getAverageRating()) << endl;
+ostream& operator<< (std::ostream &out, const Movie &m) {
+    out << "\"" << m.getTitle() << "\"," << to_string(m.getReleaseYear()) << ",\"" << m.getCertificate() << "\",\"" << m.getGenres() <<  "\"," << to_string(m.getDuration()) << "," << to_string(m.getAverageRating());
+    return out; // return std::ostream so we can chain calls to operator<<
 }
 /**
  * Splits the string to split on each seperator string

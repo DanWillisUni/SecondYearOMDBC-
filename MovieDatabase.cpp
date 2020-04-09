@@ -32,16 +32,6 @@ void MovieDatabase::add(Movie m) {
     m_db.push_back(m); // Add to the end of the database
 }
 /**
- * Prints every movie in the database
- * for each movie in the vector
- * print the movie
- */
-void MovieDatabase::print(){
-    for (auto const& m : m_db) {
-        m.print();
-    }
-}
-/**
  * Accessor
  * Gets the Movie at index i in the vector
  * @param i index to get
@@ -53,8 +43,20 @@ Movie MovieDatabase::get(int i){
 /**
  * @return The number of elements in the vector
  */
-int MovieDatabase::size(){
+int MovieDatabase::size() const{
     return m_db.size();
+}
+/**
+ * prints out the movie database overloading the << operator
+ * @param out output stream
+ * @param md movie database
+ * @return the output stream full with the movie database
+ */
+ostream& operator<< (std::ostream &out, const MovieDatabase &md) {
+    for (auto const& m : md.m_db) {
+        out << m << "\n";
+    }
+    return out; // return std::ostream so we can chain calls to operator<<
 }
 
 /**

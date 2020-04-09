@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/c/Users/danny/CLionProjects/CourseWork2/Movie.cpp
-Movie.h
-/cygdrive/c/Users/danny/CLionProjects/CourseWork2/Movie.h
-
 /cygdrive/c/Users/danny/CLionProjects/CourseWork2/Movie.h
 vector
 -
@@ -17,4 +13,22 @@ string
 -
 iostream
 -
+
+/cygdrive/c/Users/danny/CLionProjects/CourseWork2/MovieDatabase.h
+string
+-
+vector
+-
+fstream
+-
+algorithm
+-
+Movie.h
+/cygdrive/c/Users/danny/CLionProjects/CourseWork2/Movie.h
+
+/cygdrive/c/Users/danny/CLionProjects/CourseWork2/main.cpp
+Movie.h
+/cygdrive/c/Users/danny/CLionProjects/CourseWork2/Movie.h
+MovieDatabase.h
+/cygdrive/c/Users/danny/CLionProjects/CourseWork2/MovieDatabase.h
 

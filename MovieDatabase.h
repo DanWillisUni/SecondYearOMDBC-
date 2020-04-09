@@ -18,9 +18,9 @@ public:
     MovieDatabase(string fileName);//constructor from file name
     MovieDatabase();//constructor of empty database
     void add(Movie m);//add a movie
-    void print();//print the entire database
-    Movie get(int i);//get a movie in position i
-    int size();//the size of the database
+    Movie get(int i) ;//get a movie in position i
+    int size() const;//the size of the database
+    friend ostream& operator<< (std::ostream &out, const MovieDatabase &md);
 
     void sortByTitleLength();//sorts the database by titlelength
     void sortByReleaseYear();//sorts the movies by release year
