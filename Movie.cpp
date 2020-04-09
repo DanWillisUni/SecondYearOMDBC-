@@ -4,7 +4,20 @@
 
 #include "Movie.h"
 using namespace std;
-
+const map<string, Movie::certificateEnum> Movie::certificateStringToEnum = {
+        {"PG-13", PG_13},
+        {"PG", PG},
+        {"APPROVED", APPROVED},
+        {"R", R},
+        {"NOT RATED", NOT_RATED},
+        {"G", G},
+        {"UNRATED", UNRATED},
+        {"PASSED",PASSED},
+        {"N/A",NA},
+        {"TV-14",TV14},
+        {"M",M},
+        {"X",X}
+};
 void Movie::tester(){
     Movie a = Movie("Indiana Jones and the Last Crusade",1989,"PG-13","Action/Adventure/Fantasy",127,0);
     Movie b = Movie("\"Aliens\",1986,\"R\",\"Action/Adventure/Sci-Fi\",137,0");
@@ -30,7 +43,7 @@ void Movie::tester(){
 Movie::Movie(string title, int releaseYear, string certificate, string genres, int duration, int averageRating) {//Constructor
     m_title = title;
     m_releaseYear = releaseYear;
-    m_certificate = Movie::stringToEnumMap.at(certificate);
+    m_certificate = Movie::certificateStringToEnum.at(certificate);
     m_genres = genres;
     m_duration = duration;
     m_averageRating = averageRating;
@@ -44,7 +57,7 @@ Movie::Movie(string line){
     vector<string> lineSplit = splitString(line,"\"");//splits the line by "
     m_title = lineSplit[1];//splitting makes the title the 1st element
     m_releaseYear = stoi(lineSplit[2].substr(1,lineSplit[2].size() - 2));//remove the commas and convert to integer
-    m_certificate = Movie::stringToEnumMap.at(lineSplit[3]);//splitting makes the certificate 3rd
+    m_certificate = Movie::certificateStringToEnum.at(lineSplit[3]);//splitting makes the certificate 3rd
     m_genres = lineSplit[5];//all the genres are stored together and a hasGenre function was created
     vector<string> runtimeAndRatingSplit = splitString(lineSplit[6],",");//splits the already split line by commas to seperate the runtime and rating
     m_duration = stoi(runtimeAndRatingSplit[1]);//converts to integer
@@ -113,7 +126,7 @@ vector<string> Movie::splitString(const string& str, const string& seperator) {
 }
 string Movie::searchForKey(Movie::certificateEnum cE){
     string key;
-    for (auto &i : Movie::stringToEnumMap) {
+    for (auto &i : Movie::certificateStringToEnum) {
         if (i.second == cE) {
             key = i.first;
             break; // to stop searching

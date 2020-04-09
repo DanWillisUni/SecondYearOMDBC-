@@ -11,7 +11,7 @@
 #define COURSEWORK2_MOVIE_H
 using namespace std;
 class Movie{
-private:
+public:
     enum certificateEnum {
         PG_13,
         PG,
@@ -19,8 +19,14 @@ private:
         R,
         NOT_RATED,
         G,
-        UNRATED
+        UNRATED,
+        PASSED,
+        NA,
+        TV14,
+        M,
+        X
     };
+private:
     string m_title; //title of the movie
     int m_releaseYear;//year of release of the movie
     certificateEnum m_certificate;//certificate of who can watch the movie
@@ -28,17 +34,8 @@ private:
     int m_duration;//duration of the film in minutes
     int m_averageRating;//average viewer rating
     vector<string> splitString(const string& str, const string& seperator); //split string function
-    static string searchForKey(certificateEnum cE);
 public:
-    const static map<string, Movie::certificateEnum> stringToEnumMap = {
-            {"PG-13", PG_13},
-            {"PG", PG},
-            {"APPROVED", APPROVED},
-            {"R", R},
-            {"NOT RATED", NOT_RATED},
-            {"G", G},
-            {"UNRATED", UNRATED}
-    };
+    static const map<string, certificateEnum> certificateStringToEnum;
     static void tester();
     Movie(string title,int releaseYear,string certificate,string genres,int duration,int averageRating);
     Movie(string line);
@@ -59,5 +56,6 @@ public:
             return a.getDuration() > b.getDuration();
         }
     };
+    static string searchForKey(certificateEnum cE);
 };
 #endif //COURSEWORK2_MOVIE_H

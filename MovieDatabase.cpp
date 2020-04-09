@@ -130,8 +130,9 @@ void MovieDatabase::sortByReleaseYear(){
  */
 MovieDatabase MovieDatabase::filterByCertificate(string certificateToMatch){
     MovieDatabase newdb = MovieDatabase();
+    Movie::certificateEnum toMatch = Movie::certificateStringToEnum.at(certificateToMatch);
     for(auto m: m_db){
-        if (m.getCertificate() == certificateToMatch){
+        if (m.getCertificate() == toMatch){
             newdb.add(m);
         }
     }
