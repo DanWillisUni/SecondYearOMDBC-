@@ -30,7 +30,7 @@ void Movie::tester(){
 Movie::Movie(string title, int releaseYear, string certificate, string genres, int duration, int averageRating) {//Constructor
     m_title = title;
     m_releaseYear = releaseYear;
-    m_certificate = certificate;
+    m_certificate = Movie::stringToEnumMap.at(certificate);
     m_genres = genres;
     m_duration = duration;
     m_averageRating = averageRating;
@@ -44,7 +44,7 @@ Movie::Movie(string line){
     vector<string> lineSplit = splitString(line,"\"");//splits the line by "
     m_title = lineSplit[1];//splitting makes the title the 1st element
     m_releaseYear = stoi(lineSplit[2].substr(1,lineSplit[2].size() - 2));//remove the commas and convert to integer
-    m_certificate = lineSplit[3];//splitting makes the certificate 3rd
+    m_certificate = Movie::stringToEnumMap.at(lineSplit[3]);//splitting makes the certificate 3rd
     m_genres = lineSplit[5];//all the genres are stored together and a hasGenre function was created
     vector<string> runtimeAndRatingSplit = splitString(lineSplit[6],",");//splits the already split line by commas to seperate the runtime and rating
     m_duration = stoi(runtimeAndRatingSplit[1]);//converts to integer
@@ -57,7 +57,7 @@ string Movie::getTitle() const{
 int Movie::getReleaseYear() const{
     return m_releaseYear;
 }
-string Movie::getCertificate() const{
+Movie::certificateEnum Movie::getCertificate() const{
     return m_certificate;
 }
 string Movie::getGenres() const{
@@ -87,11 +87,11 @@ bool Movie::hasGenre(string genreToMatch){
  * @return the output stream full with the movie
  */
 ostream& operator<< (ostream &out, const Movie &m) {
-    out << "\"" << m.getTitle() << "\"," << to_string(m.getReleaseYear()) << ",\"" << m.getCertificate() << "\",\"" << m.getGenres() <<  "\"," << to_string(m.getDuration()) << "," << to_string(m.getAverageRating()) << "\n";
-    return out; // returnostream so I can chain calls to operator<< used for the
+    out << "\"" << m.getTitle() << "\"," << to_string(m.getReleaseYear()) << ",\"" << Movie::searchForKey(m.getCertificate()) << "\",\"" << m.getGenres() <<  "\"," << to_string(m.getDuration()) << "," << to_string(m.getAverageRating()) << "\n";
+    return out; // return ostream so I can chain calls to operator<< used for the
 }
 /**
- * Splits the string to split on each seperator string
+ * Splits the string to split on each separator string
  * @param str string to split
  * @param seperator string to split on
  * @return vector of all the substrings split
@@ -110,4 +110,14 @@ vector<string> Movie::splitString(const string& str, const string& seperator) {
         pos = newPos + seperator.length();//jumps to the end of the seperator
     }
     return parts;
+}
+string Movie::searchForKey(Movie::certificateEnum cE){
+    string key;
+    for (auto &i : Movie::stringToEnumMap) {
+        if (i.second == cE) {
+            key = i.first;
+            break; // to stop searching
+        }
+    }
+    return key;
 }
