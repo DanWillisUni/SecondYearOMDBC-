@@ -28,7 +28,7 @@ public:
     int getDuration() const;
     int getAverageRating() const;
     bool hasGenre(string genreToMatch);
-    void print();
+    void print() const;
 
     bool operator< (Movie other) const {//overrides the less than operator
         return this->getReleaseYear() < other.getReleaseYear();

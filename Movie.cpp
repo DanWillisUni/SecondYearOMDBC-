@@ -71,7 +71,7 @@ bool Movie::hasGenre(string genreToMatch){
  * outputs to the console the movie
  * in the exact format it is in the films.txt file
  */
-void Movie::print(){
+void Movie::print() const{
     cout << "\"" << getTitle() << "\"," << to_string(getReleaseYear()) << ",\"" << getCertificate() << "\",\"" << getGenres() <<  "\"," << to_string(getDuration()) << "," << to_string(getAverageRating()) << endl;
 }
 /**

@@ -14,7 +14,7 @@ MovieDatabase::MovieDatabase(string fileName){
     string line;
     MovieDatabase();//constructs new movie database obj
     while (getline(file, line)) {//while there is still another line
-        add(Movie(line));//construct then add a new movie from a line in the file
+        m_db.emplace_back(line);  // construct a new Movie directly into the database
     }
 }
 /**
@@ -25,11 +25,11 @@ MovieDatabase::MovieDatabase():m_db(){
 }
 /**
  * Modifier
- * Adds a movie to the vector using push back
+ * Adds a movie to the database
  * @param m movie to add
  */
 void MovieDatabase::add(Movie m) {
-    m_db.push_back(m);
+    m_db.push_back(m); // Add to the end of the database
 }
 /**
  * Prints every movie in the database
@@ -37,7 +37,7 @@ void MovieDatabase::add(Movie m) {
  * print the movie
  */
 void MovieDatabase::print(){
-    for(auto m: m_db){
+    for (auto const& m : m_db) {
         m.print();
     }
 }
@@ -56,9 +56,15 @@ Movie MovieDatabase::get(int i){
 int MovieDatabase::size(){
     return m_db.size();
 }
+
+/**
+ * I implemented 4 different methods to sort the database on the 4 different fields
+ * I wanted to explore different ways of using the std::sort method
+ */
 namespace {
     /**
      * Comparator function for movie title length
+     * The function that returns a boolean that I am using in SortMoviesByTitleLength
      * @param a referance to first movie
      * @param b reverance to second movie
      * @return if the first title is longer than the second
@@ -69,7 +75,7 @@ namespace {
 }
 /**
  * The actual sorting function that would be called to sort the database obj
- * This uses the comparator function obove
+ * This uses the comparator function obove as a third parameter in std::sort
  * highest to lowest
  */
 void MovieDatabase::sortByTitleLength(){//function
@@ -77,7 +83,7 @@ void MovieDatabase::sortByTitleLength(){//function
 }
 /**
  * Sorting function to sort the movies by year or release
- * Uses a relational comparator overrride therefore only two parameters
+ * Uses a relational comparator overrride therefore only two parameters in std::sort
  * lowest to highest
  */
 void MovieDatabase::sortByReleaseYear(){
@@ -118,12 +124,16 @@ MovieDatabase MovieDatabase::filterByGenre(string genreToMatch){
     return newdb;
 }
 /**
- * Sorts the database by duration of the movies
- * This uses a struct, making it a functor
- * And sorts highest to lowest
+ * Sorts the database by duration of the movies, highest to lowest
+ * Uses a functor
  */
 void MovieDatabase::sortByDuration(){
-    sort(m_db.begin(),m_db.end(),Movie::CompareMoviesByDuration());
+    // Create a functor (i.e. a callable object) that implements operator()
+    // such that when it is called it returns true if it's  first parameter
+    // should come before its second parameter
+    Movie::CompareMoviesByDuration compareFunctor;
+    // Call sort, passing the functor object as the third parameter
+    sort(m_db.begin(),m_db.end(), compareFunctor);
 }
 /**
  * Unused in the code
