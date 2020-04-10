@@ -46,6 +46,12 @@ MovieDatabase::MovieDatabase(string fileName){
         m_db.emplace_back(line);  // construct a new Movie directly into the database
     }
 }
+MovieDatabase::MovieDatabase(vector<Movie> newM_db){
+    MovieDatabase();//constructs new movie database obj
+    for(auto m: newM_db){
+        add(m);
+    }
+}
 /**
  * Constructor
  * Creates a new movie database obj by creating a brand new empty vector
@@ -128,15 +134,23 @@ void MovieDatabase::sortByReleaseYear(){
  * @param certificateToMatch the certificate that all the movies must have
  * @return a movie database of all the movies that have this certificate
  */
-MovieDatabase MovieDatabase::filterByCertificate(string certificateToMatch){
-    MovieDatabase newdb = MovieDatabase();
-    Movie::certificateEnum toMatch = Movie::certificateStringToEnum.at(certificateToMatch);
-    for(auto m: m_db){
-        if (m.getCertificate() == toMatch){
-            newdb.add(m);
-        }
-    }
-    return newdb;
+MovieDatabase MovieDatabase::filterByCertificate(const string certificateToMatch){
+    vector<Movie> newM_db (m_db.size());
+    auto it = copy_if(m_db.begin(), m_db.end(), newM_db.begin(), [](Movie m) {
+        return (m.getCertificate() == Movie::certificateStringToEnum.at(certificateToMatch));
+    });
+    newM_db.resize(distance(newM_db.begin(),it));
+    return MovieDatabase(newM_db);
+
+
+//    MovieDatabase newdb = MovieDatabase();
+//    Movie::certificateEnum toMatch = Movie::certificateStringToEnum.at(certificateToMatch);
+//    for(auto m: m_db){
+//        if (m.getCertificate() == toMatch){
+//            newdb.add(m);
+//        }
+//    }
+//    return newdb;
 }
 /**
  * Constructs a new movie database obj
