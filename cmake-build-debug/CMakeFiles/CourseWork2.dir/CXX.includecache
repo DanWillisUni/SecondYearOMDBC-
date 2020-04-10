@@ -16,12 +16,6 @@ iostream
 map
 -
 
-/cygdrive/c/Users/danny/CLionProjects/CourseWork2/MovieDatabase.cpp
-algorithm
--
-MovieDatabase.h
-/cygdrive/c/Users/danny/CLionProjects/CourseWork2/MovieDatabase.h
-
 /cygdrive/c/Users/danny/CLionProjects/CourseWork2/MovieDatabase.h
 string
 -
@@ -31,4 +25,10 @@ fstream
 -
 Movie.h
 /cygdrive/c/Users/danny/CLionProjects/CourseWork2/Movie.h
+
+/cygdrive/c/Users/danny/CLionProjects/CourseWork2/main.cpp
+Movie.h
+/cygdrive/c/Users/danny/CLionProjects/CourseWork2/Movie.h
+MovieDatabase.h
+/cygdrive/c/Users/danny/CLionProjects/CourseWork2/MovieDatabase.h
 

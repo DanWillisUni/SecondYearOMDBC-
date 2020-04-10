@@ -136,7 +136,7 @@ void MovieDatabase::sortByReleaseYear(){
  */
 MovieDatabase MovieDatabase::filterByCertificate(const string certificateToMatch){
     vector<Movie> newM_db (m_db.size());
-    auto it = copy_if(m_db.begin(), m_db.end(), newM_db.begin(), [](Movie m) {
+    auto it = copy_if(m_db.begin(), m_db.end(), newM_db.begin(), [& certificateToMatch](const Movie& m) {
         return (m.getCertificate() == Movie::certificateStringToEnum.at(certificateToMatch));
     });
     newM_db.resize(distance(newM_db.begin(),it));

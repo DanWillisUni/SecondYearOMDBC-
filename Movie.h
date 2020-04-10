@@ -39,6 +39,7 @@ public:
     static void tester();
     Movie(string title,int releaseYear,string certificate,string genres,int duration,int averageRating);
     Movie(string line);
+    Movie();
     string getTitle() const;
     int getReleaseYear() const;
     certificateEnum getCertificate() const;

@@ -63,6 +63,7 @@ Movie::Movie(string line){
     m_duration = stoi(runtimeAndRatingSplit[1]);//converts to integer
     m_averageRating = stoi(runtimeAndRatingSplit[2]);//converts to integer
 }
+Movie::Movie(){}
 //accessor methods
 string Movie::getTitle() const{
     return m_title;
