@@ -12,7 +12,7 @@
 using namespace std;
 class Movie{
 public:
-    enum certificateEnum {
+    enum certificateEnum {//enum of all the certificates that can happen
         PG_13,
         PG,
         APPROVED,
@@ -35,11 +35,11 @@ private:
     int m_averageRating;//average viewer rating
     vector<string> splitString(const string& str, const string& seperator); //split string function
 public:
-    static const map<string, certificateEnum> certificateStringToEnum;
-    static void tester();
+    static const map<string, certificateEnum> certificateStringToEnum;//map for converting the string to the enum type
+    static void tester();//test harness
     Movie(string title,int releaseYear,string certificate,string genres,int duration,int averageRating);
-    Movie(string line);
-    Movie();
+    Movie(string line);//creates a movie from the line in the file
+    Movie();//empty movie constructor
     string getTitle() const;
     int getReleaseYear() const;
     certificateEnum getCertificate() const;
@@ -48,7 +48,7 @@ public:
     int getAverageRating() const;
     bool hasGenre(string genreToMatch);
 
-    friend ostream& operator<< (std::ostream &out, const Movie &m);
+    friend ostream& operator<< (std::ostream &out, const Movie &m);//override the operator
     bool operator< (Movie other) const {//overrides the less than operator
         return this->getReleaseYear() < other.getReleaseYear();
     }

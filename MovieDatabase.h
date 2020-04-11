@@ -14,7 +14,7 @@ class MovieDatabase{
 private:
     vector<Movie> m_db;//vector of movies in the database
 public:
-    static void tester();
+    static void tester();//test harness
     MovieDatabase(string fileName);//constructor from file name
     MovieDatabase(vector<Movie> newM_db);
     MovieDatabase();//constructor of empty database

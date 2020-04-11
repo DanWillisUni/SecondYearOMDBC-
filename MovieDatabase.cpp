@@ -46,10 +46,15 @@ MovieDatabase::MovieDatabase(string fileName){
         m_db.emplace_back(line);  // construct a new Movie directly into the database
     }
 }
+/**
+ * Constructor
+ * Constructs a database with the vector passed in vector
+ * @param newM_db vector of the database
+ */
 MovieDatabase::MovieDatabase(vector<Movie> newM_db){
     MovieDatabase();//constructs new movie database obj
-    for(auto m: newM_db){
-        add(m);
+    for(auto m: newM_db){//goes through the new movie database
+        add(m);//adds a new movie to the new database
     }
 }
 /**
@@ -97,6 +102,7 @@ ostream& operator<< (std::ostream &out, const MovieDatabase &md) {
 /**
  * I implemented 4 different methods to sort the database on the 4 different fields
  * I wanted to explore different ways of using the std::sort method
+ * And the 2 different methods to filter the database
  */
 namespace {
     /**
@@ -128,29 +134,18 @@ void MovieDatabase::sortByReleaseYear(){
 }
 /**
  * Creates a new movie database
- * for each movie in the current database
- * if the movie certificate matches the desired one
- * add that movie to the new database
+ * if the movie certificate matches the desired one in the vector
+ * add that movie to the new database using std::copy_if
  * @param certificateToMatch the certificate that all the movies must have
  * @return a movie database of all the movies that have this certificate
  */
 MovieDatabase MovieDatabase::filterByCertificate(const string certificateToMatch){
-    vector<Movie> newM_db (m_db.size());
-    auto it = copy_if(m_db.begin(), m_db.end(), newM_db.begin(), [& certificateToMatch](const Movie& m) {
-        return (m.getCertificate() == Movie::certificateStringToEnum.at(certificateToMatch));
+    vector<Movie> newM_db (m_db.size());//creates a new vector of empty movies
+    auto it = copy_if(m_db.begin(), m_db.end(), newM_db.begin(), [& certificateToMatch](const Movie& m) {//use copy if and a lambda
+        return (m.getCertificate() == Movie::certificateStringToEnum.at(certificateToMatch));//filter by the certificate
     });
-    newM_db.resize(distance(newM_db.begin(),it));
+    newM_db.resize(distance(newM_db.begin(),it));//resize the new vector
     return MovieDatabase(newM_db);
-
-
-//    MovieDatabase newdb = MovieDatabase();
-//    Movie::certificateEnum toMatch = Movie::certificateStringToEnum.at(certificateToMatch);
-//    for(auto m: m_db){
-//        if (m.getCertificate() == toMatch){
-//            newdb.add(m);
-//        }
-//    }
-//    return newdb;
 }
 /**
  * Constructs a new movie database obj
@@ -161,10 +156,10 @@ MovieDatabase MovieDatabase::filterByCertificate(const string certificateToMatch
  * @return a new database obj of all the films in the desired genre
  */
 MovieDatabase MovieDatabase::filterByGenre(string genreToMatch){
-    MovieDatabase newdb = MovieDatabase();
+    MovieDatabase newdb = MovieDatabase();//make a empty new database
     for(auto m: m_db){
-        if (m.hasGenre(genreToMatch)){
-            newdb.add(m);
+        if (m.hasGenre(genreToMatch)){//if the movie contains the desired genre
+            newdb.add(m);//add the movie to the database
         }
     }
     return newdb;
@@ -187,7 +182,7 @@ void MovieDatabase::sortByDuration(){
  * highest to lowest
  */
 void MovieDatabase::sortByAverageRating() {
-    sort(m_db.begin(), m_db.end(),[](const Movie & a, const Movie & b) -> bool {
+    sort(m_db.begin(), m_db.end(),[](const Movie & a, const Movie & b) -> bool {//use an lamda to sort
         return a.getAverageRating() > b.getAverageRating();
     });
 }

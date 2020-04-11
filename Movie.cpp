@@ -84,14 +84,14 @@ int Movie::getAverageRating() const{
     return m_averageRating;
 }
 /**
- * split on the desired genre
+ * Split on the desired genre
  * if there is more than one element in the new vector
  * that means that it must be of the desired genre
  * @param genreToMatch desired genre
  * @return true if the movie is of the desired genre
  */
 bool Movie::hasGenre(string genreToMatch){
-    vector<string> genreSplit = splitString(m_genres,genreToMatch);
+    vector<string> genreSplit = splitString(m_genres,genreToMatch);//vector to split the genres by the genre to find
     return(genreSplit.size()>1);
 }
 /**
@@ -125,12 +125,17 @@ vector<string> Movie::splitString(const string& str, const string& seperator) {
     }
     return parts;
 }
+/**
+ * Search for the key string of the certificate from the certificate enum
+ * @param cE certificate enum to match
+ * @return the string, matching the certificate enum
+ */
 string Movie::searchForKey(Movie::certificateEnum cE){
     string key;
-    for (auto &i : Movie::certificateStringToEnum) {
-        if (i.second == cE) {
-            key = i.first;
-            break; // to stop searching
+    for (auto &i : Movie::certificateStringToEnum) {//goes through the map
+        if (i.second == cE) {//compares the second item (the value) to
+            key = i.first; //the key is set
+            break; //To stop searching
         }
     }
     return key;
