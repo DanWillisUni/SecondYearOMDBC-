@@ -73,15 +73,6 @@ MovieDatabase::MovieDatabase(const string& fileName){
 MovieDatabase::MovieDatabase():m_db(){
 }
 /**
- * Constructor
- * Creates a new database with a vector of size
- * @param size, size of the database
- */
-MovieDatabase::MovieDatabase(const size_t& size){
-    MovieDatabase();
-    m_db.resize(size);
-}
-/**
  * Modifier
  * Adds a movie to the database
  * @param m movie to add
@@ -173,11 +164,12 @@ void MovieDatabase::sortByReleaseYear(){
  * @return a movie database of all the movies that have this certificate
  */
 MovieDatabase MovieDatabase::filterByCertificate(const string& certificateToMatch){
-    MovieDatabase newDatabase = MovieDatabase(m_db.size());
+    MovieDatabase newDatabase = MovieDatabase();
+    newDatabase.resize(m_db.size());
     auto it = copy_if(m_db.begin(), m_db.end(), newDatabase.m_db.begin(), [& certificateToMatch](const Movie& m) {//use copy if and a lambda
         return (m.getCertificate() == Movie::certificateStringToEnum.at(certificateToMatch));//filter by the certificate
     });
-    newDatabase.resize(distance(newDatabase.m_db.begin(),it));
+    newDatabase.resize(distance(newDatabase.m_db.begin(),it));//resizes the array in the database to the correct size so no empty movies
     return newDatabase;
 }
 /**
