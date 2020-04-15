@@ -7,6 +7,7 @@
 #include <fstream>
 
 #include "Movie.h"
+
 using namespace std;
 #ifndef COURSEWORK2_MOVIEDATABASE_H
 #define COURSEWORK2_MOVIEDATABASE_H
@@ -22,9 +23,10 @@ public:
     void resize(const size_t& newSize);
     Movie get(const int& i) ;//get a movie in position i
     int size() const;//the size of the database
+
     friend ostream& operator<< (std::ostream &out, const MovieDatabase &md);
 
-    void sortByTitleLength();//sorts the database by titlelength
+    void sortByTitleLength();//sorts the database by title length
     void sortByReleaseYear();//sorts the movies by release year
     MovieDatabase filterByCertificate(const string& certificateToMatch);//gives a new database of movies with a specific certificate
     MovieDatabase filterByGenre(const string& genreToMatch);//gives a new database with all the movies that have a specific genre

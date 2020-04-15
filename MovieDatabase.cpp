@@ -5,8 +5,22 @@
 #include <algorithm>
 #include "MovieDatabase.h"
 
+/**
+ * test harness
+ * constructs a database from the file
+ * sorts the database by release year
+ * displays the size of the database
+ * filters by PG certificate
+ * displays the sie of the database to prove the differance
+ * sorts by the title length of the movies
+ * filters by the genre of comedy
+ * displays the size to show the differance in size
+ * sorts by average rating
+ * sorts by duration
+ * prints the longest film
+ */
 void MovieDatabase::tester(){
-    MovieDatabase database = MovieDatabase("../films.txt");
+    MovieDatabase database = MovieDatabase("films.txt");
     cout << "In from file\n";
     cout << database;
     database.sortByReleaseYear();
@@ -34,9 +48,10 @@ void MovieDatabase::tester(){
 }
 /**
  * Constructor
- * reads in the file line by line
- * for each line it constructs a movie object and adds it to the database
- * @param fileName the name of the file to build the database from
+ * reads in the file line by line if the file exists
+ * while there is a line, it constructs a movie object and adds it to the database
+ * closes the file
+ * @param fileName, the name of the file to build the database from
  */
 MovieDatabase::MovieDatabase(const string& fileName){
     ifstream file(fileName);
@@ -57,6 +72,11 @@ MovieDatabase::MovieDatabase(const string& fileName){
  */
 MovieDatabase::MovieDatabase():m_db(){
 }
+/**
+ * Constructor
+ * Creates a new database with a vector of size
+ * @param size, size of the database
+ */
 MovieDatabase::MovieDatabase(const size_t& size){
     MovieDatabase();
     m_db.resize(size);
@@ -69,6 +89,11 @@ MovieDatabase::MovieDatabase(const size_t& size){
 void MovieDatabase::add(const Movie& m) {
     m_db.push_back(m); // Add to the end of the database
 }
+/**
+ * Modifier
+ * Resizes the database vector to new size
+ * @param newSize, the new size to set the vector to
+ */
 void MovieDatabase::resize(const size_t& newSize){
     m_db.resize(newSize);//resize the new vector
 }
@@ -87,6 +112,7 @@ Movie MovieDatabase::get(const int& i){
 int MovieDatabase::size() const{
     return m_db.size();
 }
+
 /**
  * prints out the movie database overloading the << operator
  * @param out output stream
@@ -102,8 +128,14 @@ ostream& operator<< (std::ostream &out, const MovieDatabase &md) {
 
 /**
  * I implemented 4 different methods to sort the database on the 4 different fields
+ * For the title length I used a function
+ * For the release year I overloaded the < operator in the movie header file
+ * For the duration I used a functor
+ * For the average rating I used a lambda
  * I wanted to explore different ways of using the std::sort method
  * And the 2 different methods to filter the database
+ * For Filtering by genre I used for loop with an if statement
+ * For filtering by certificate I used a copy_if function with iterator
  */
 namespace {
     /**
@@ -119,7 +151,7 @@ namespace {
 }
 /**
  * The actual sorting function that would be called to sort the database obj
- * This uses the comparator function obove as a third parameter in std::sort
+ * This uses the comparator function above as a third parameter in std::sort
  * highest to lowest
  */
 void MovieDatabase::sortByTitleLength(){//function
@@ -127,16 +159,16 @@ void MovieDatabase::sortByTitleLength(){//function
 }
 /**
  * Sorting function to sort the movies by year or release
- * Uses a relational comparator overrride therefore only two parameters in std::sort
+ * Uses a relational comparator override therefore only two parameters in std::sort
  * lowest to highest
  */
 void MovieDatabase::sortByReleaseYear(){
     sort(m_db.begin(),m_db.end());
 }
 /**
- * Creates a new movie database
- * if the movie certificate matches the desired one in the vector
- * add that movie to the new database using std::copy_if
+ * Creates a new movie database of the current size
+ * Directly edits the new databases vector of movies and copies the movies in
+ * Resizes the new databases vector of movies
  * @param certificateToMatch the certificate that all the movies must have
  * @return a movie database of all the movies that have this certificate
  */
@@ -177,7 +209,7 @@ void MovieDatabase::sortByDuration(){
     sort(m_db.begin(),m_db.end(), compareFunctor);// Call sort, passing the functor object as the third parameter
 }
 /**
- * Unused in the code
+ * Unused for the task on blackboard
  * Sorts the database by average rating
  * This uses a lambda to sort
  * highest to lowest
