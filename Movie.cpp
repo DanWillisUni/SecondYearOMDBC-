@@ -84,15 +84,17 @@ int Movie::getAverageRating() const{
     return m_averageRating;
 }
 /**
- * Split on the desired genre
- * if there is more than one element in the new vector
- * that means that it must be of the desired genre
+ * to find if a movie is of a specified genre
+ * using find function
  * @param genreToMatch desired genre
  * @return true if the movie is of the desired genre
  */
-bool Movie::hasGenre(string genreToMatch){
-    vector<string> genreSplit = splitString(m_genres,genreToMatch);//vector to split the genres by the genre to find
-    return(genreSplit.size()>1);
+bool Movie::hasGenre(string genreToMatch) const{
+    size_t found = getGenres().find(genreToMatch);
+    if (found!=string::npos){
+        return true;
+    }
+    return false;
 }
 /**
  * prints out the movie overloading the << operator

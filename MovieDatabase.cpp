@@ -40,21 +40,15 @@ void MovieDatabase::tester(){
  */
 MovieDatabase::MovieDatabase(string fileName){
     ifstream file(fileName);
-    string line;
     MovieDatabase();//constructs new movie database obj
-    while (getline(file, line)) {//while there is still another line
-        m_db.emplace_back(line);  // construct a new Movie directly into the database
-    }
-}
-/**
- * Constructor
- * Constructs a database with the vector passed in vector
- * @param newM_db vector of the database
- */
-MovieDatabase::MovieDatabase(vector<Movie> newM_db){
-    MovieDatabase();//constructs new movie database obj
-    for(auto m: newM_db){//goes through the new movie database
-        add(m);//adds a new movie to the new database
+    if (file.is_open()){
+        string line;
+        while (getline(file, line)) {//while there is still another line
+            m_db.emplace_back(line);  // construct a new Movie directly into the database
+        }
+        file.close();
+    } else {
+        cout << "Error: Unable to find file " << fileName << endl;
     }
 }
 /**
@@ -63,6 +57,10 @@ MovieDatabase::MovieDatabase(vector<Movie> newM_db){
  */
 MovieDatabase::MovieDatabase():m_db(){
 }
+MovieDatabase::MovieDatabase(size_t size){
+    MovieDatabase();
+    m_db.resize(size);
+}
 /**
  * Modifier
  * Adds a movie to the database
@@ -70,6 +68,9 @@ MovieDatabase::MovieDatabase():m_db(){
  */
 void MovieDatabase::add(Movie m) {
     m_db.push_back(m); // Add to the end of the database
+}
+void MovieDatabase::resize(size_t newSize){
+    m_db.resize(newSize);//resize the new vector
 }
 /**
  * Accessor
@@ -140,12 +141,12 @@ void MovieDatabase::sortByReleaseYear(){
  * @return a movie database of all the movies that have this certificate
  */
 MovieDatabase MovieDatabase::filterByCertificate(const string certificateToMatch){
-    vector<Movie> newM_db (m_db.size());//creates a new vector of empty movies
-    auto it = copy_if(m_db.begin(), m_db.end(), newM_db.begin(), [& certificateToMatch](const Movie& m) {//use copy if and a lambda
+    MovieDatabase newDatabase = MovieDatabase(m_db.size());
+    auto it = copy_if(m_db.begin(), m_db.end(), newDatabase.m_db.begin(), [& certificateToMatch](const Movie& m) {//use copy if and a lambda
         return (m.getCertificate() == Movie::certificateStringToEnum.at(certificateToMatch));//filter by the certificate
     });
-    newM_db.resize(distance(newM_db.begin(),it));//resize the new vector
-    return MovieDatabase(newM_db);
+    newDatabase.resize(distance(newDatabase.m_db.begin(),it));
+    return newDatabase;
 }
 /**
  * Constructs a new movie database obj

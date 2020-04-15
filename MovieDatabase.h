@@ -18,7 +18,9 @@ public:
     MovieDatabase(string fileName);//constructor from file name
     MovieDatabase(vector<Movie> newM_db);
     MovieDatabase();//constructor of empty database
+    MovieDatabase(size_t size);
     void add(Movie m);//add a movie
+    void resize(size_t newSize);
     Movie get(int i) ;//get a movie in position i
     int size() const;//the size of the database
     friend ostream& operator<< (std::ostream &out, const MovieDatabase &md);

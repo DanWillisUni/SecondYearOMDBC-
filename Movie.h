@@ -34,6 +34,7 @@ private:
     int m_duration;//duration of the film in minutes
     int m_averageRating;//average viewer rating
     vector<string> splitString(const string& str, const string& seperator); //split string function
+    static string searchForKey(certificateEnum cE);
 public:
     static const map<string, certificateEnum> certificateStringToEnum;//map for converting the string to the enum type
     static void tester();//test harness
@@ -46,17 +47,16 @@ public:
     string getGenres() const;
     int getDuration() const;
     int getAverageRating() const;
-    bool hasGenre(string genreToMatch);
+    bool hasGenre(string genreToMatch) const;
 
     friend ostream& operator<< (std::ostream &out, const Movie &m);//override the operator
     bool operator< (Movie other) const {//overrides the less than operator
         return this->getReleaseYear() < other.getReleaseYear();
     }
-    struct CompareMoviesByDuration { //struct used to compare movies by duration
+    struct CompareMoviesByDuration { //struct used to compare movies by duration using a functor
         bool operator () (Movie a,Movie b) const {
             return a.getDuration() > b.getDuration();
         }
     };
-    static string searchForKey(certificateEnum cE);
 };
 #endif //COURSEWORK2_MOVIE_H
