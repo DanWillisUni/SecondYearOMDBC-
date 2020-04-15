@@ -18,7 +18,6 @@ public:
     static void tester();//test harness
     explicit MovieDatabase(const string& fileName);//constructor from file name
     MovieDatabase();//constructor of empty database
-    explicit MovieDatabase(const size_t& size);
     void add(const Movie& m);//add a movie
     void resize(const size_t& newSize);
     Movie get(const int& i) ;//get a movie in position i
