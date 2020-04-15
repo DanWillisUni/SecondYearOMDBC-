@@ -33,13 +33,13 @@ private:
     string m_genres;//genres the movie fits into
     int m_duration;//duration of the film in minutes
     int m_averageRating;//average viewer rating
-    vector<string> splitString(const string& str, const string& seperator); //split string function
-    static string searchForKey(certificateEnum cE);
+    static vector<string> splitString(const string& str, const string& seperator); //split string function
+    static string searchForKey(const certificateEnum& cE);
 public:
     static const map<string, certificateEnum> certificateStringToEnum;//map for converting the string to the enum type
     static void tester();//test harness
-    Movie(string title,int releaseYear,string certificate,string genres,int duration,int averageRating);
-    Movie(string line);//creates a movie from the line in the file
+    Movie(const string& title, const int& releaseYear, const string& certificate, const string& genres, const int& duration, const int& averageRating);
+    explicit Movie(const string& line);//creates a movie from the line in the file
     Movie();//empty movie constructor
     string getTitle() const;
     int getReleaseYear() const;
@@ -47,14 +47,14 @@ public:
     string getGenres() const;
     int getDuration() const;
     int getAverageRating() const;
-    bool hasGenre(string genreToMatch) const;
+    bool hasGenre(const string& genreToMatch) const;
 
     friend ostream& operator<< (std::ostream &out, const Movie &m);//override the operator
-    bool operator< (Movie other) const {//overrides the less than operator
+    bool operator< (const Movie& other) const {//overrides the less than operator
         return this->getReleaseYear() < other.getReleaseYear();
     }
     struct CompareMoviesByDuration { //struct used to compare movies by duration using a functor
-        bool operator () (Movie a,Movie b) const {
+        bool operator () (const Movie& a, const Movie& b) const {
             return a.getDuration() > b.getDuration();
         }
     };

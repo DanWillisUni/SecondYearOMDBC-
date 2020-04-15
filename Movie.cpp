@@ -40,7 +40,7 @@ void Movie::tester(){
  * @param duration duration of the movie
  * @param averageRating average rating of the movie
  */
-Movie::Movie(string title, int releaseYear, string certificate, string genres, int duration, int averageRating) {//Constructor
+Movie::Movie(const string& title, const int& releaseYear, const string& certificate, const string& genres, const int& duration, const int& averageRating) {//Constructor
     m_title = title;
     m_releaseYear = releaseYear;
     m_certificate = Movie::certificateStringToEnum.at(certificate);
@@ -53,7 +53,7 @@ Movie::Movie(string title, int releaseYear, string certificate, string genres, i
  * Creates a movie from a line in a file
  * @param line the line of the file
  */
-Movie::Movie(string line){
+Movie::Movie(const string& line){
     vector<string> lineSplit = splitString(line,"\"");//splits the line by "
     m_title = lineSplit[1];//splitting makes the title the 1st element
     m_releaseYear = stoi(lineSplit[2].substr(1,lineSplit[2].size() - 2));//remove the commas and convert to integer
@@ -89,7 +89,7 @@ int Movie::getAverageRating() const{
  * @param genreToMatch desired genre
  * @return true if the movie is of the desired genre
  */
-bool Movie::hasGenre(string genreToMatch) const{
+bool Movie::hasGenre(const string& genreToMatch) const{
     size_t found = getGenres().find(genreToMatch);
     if (found!=string::npos){
         return true;
@@ -132,7 +132,7 @@ vector<string> Movie::splitString(const string& str, const string& seperator) {
  * @param cE certificate enum to match
  * @return the string, matching the certificate enum
  */
-string Movie::searchForKey(Movie::certificateEnum cE){
+string Movie::searchForKey(const Movie::certificateEnum& cE){
     string key;
     for (auto &i : Movie::certificateStringToEnum) {//goes through the map
         if (i.second == cE) {//compares the second item (the value) to

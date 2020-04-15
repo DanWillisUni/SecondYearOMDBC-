@@ -38,7 +38,7 @@ void MovieDatabase::tester(){
  * for each line it constructs a movie object and adds it to the database
  * @param fileName the name of the file to build the database from
  */
-MovieDatabase::MovieDatabase(string fileName){
+MovieDatabase::MovieDatabase(const string& fileName){
     ifstream file(fileName);
     MovieDatabase();//constructs new movie database obj
     if (file.is_open()){
@@ -57,7 +57,7 @@ MovieDatabase::MovieDatabase(string fileName){
  */
 MovieDatabase::MovieDatabase():m_db(){
 }
-MovieDatabase::MovieDatabase(size_t size){
+MovieDatabase::MovieDatabase(const size_t& size){
     MovieDatabase();
     m_db.resize(size);
 }
@@ -66,10 +66,10 @@ MovieDatabase::MovieDatabase(size_t size){
  * Adds a movie to the database
  * @param m movie to add
  */
-void MovieDatabase::add(Movie m) {
+void MovieDatabase::add(const Movie& m) {
     m_db.push_back(m); // Add to the end of the database
 }
-void MovieDatabase::resize(size_t newSize){
+void MovieDatabase::resize(const size_t& newSize){
     m_db.resize(newSize);//resize the new vector
 }
 /**
@@ -78,7 +78,7 @@ void MovieDatabase::resize(size_t newSize){
  * @param i index to get
  * @return Movie at index i
  */
-Movie MovieDatabase::get(int i){
+Movie MovieDatabase::get(const int& i){
     return m_db.at(i);//a vector has this method at already however the vector is private so needs its own accessor method
 }
 /**
@@ -140,7 +140,7 @@ void MovieDatabase::sortByReleaseYear(){
  * @param certificateToMatch the certificate that all the movies must have
  * @return a movie database of all the movies that have this certificate
  */
-MovieDatabase MovieDatabase::filterByCertificate(const string certificateToMatch){
+MovieDatabase MovieDatabase::filterByCertificate(const string& certificateToMatch){
     MovieDatabase newDatabase = MovieDatabase(m_db.size());
     auto it = copy_if(m_db.begin(), m_db.end(), newDatabase.m_db.begin(), [& certificateToMatch](const Movie& m) {//use copy if and a lambda
         return (m.getCertificate() == Movie::certificateStringToEnum.at(certificateToMatch));//filter by the certificate
@@ -156,7 +156,7 @@ MovieDatabase MovieDatabase::filterByCertificate(const string certificateToMatch
  * @param genreToMatch the genre to match
  * @return a new database obj of all the films in the desired genre
  */
-MovieDatabase MovieDatabase::filterByGenre(string genreToMatch){
+MovieDatabase MovieDatabase::filterByGenre(const string& genreToMatch){
     MovieDatabase newdb = MovieDatabase();//make a empty new database
     for(auto m: m_db){
         if (m.hasGenre(genreToMatch)){//if the movie contains the desired genre
