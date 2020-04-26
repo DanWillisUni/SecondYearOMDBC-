@@ -184,8 +184,8 @@ void MovieDatabase::sortByDuration(){
  * highest to lowest
  */
 void MovieDatabase::sortByAverageRating() {
-    sort(m_db.begin(), m_db.end(),[](const Movie & a, const Movie & b) -> bool {//use an lamda to sort
-        return a.getAverageRating() > b.getAverageRating();
+    sort(m_db.begin(), m_db.end(),[](const Movie & movie1, const Movie & movie2) -> bool {//use an lamda to sort
+        return movie1.getAverageRating() > movie2.getAverageRating();
     });
 }
 
@@ -199,8 +199,8 @@ void MovieDatabase::sortByAverageRating() {
 MovieDatabase MovieDatabase::filterByCertificate(const string& certificateToMatch){
     MovieDatabase newDatabase = MovieDatabase();
     newDatabase.resize(m_db.size());
-    auto it = copy_if(m_db.begin(), m_db.end(), newDatabase.m_db.begin(), [& certificateToMatch](const Movie& m) {//use copy if and a lambda
-        return (m.getCertificate() == Movie::certificateStringToEnum.at(certificateToMatch));//filter by the certificate
+    auto it = copy_if(m_db.begin(), m_db.end(), newDatabase.m_db.begin(), [& certificateToMatch](const Movie& movie) {//use copy if and a lambda
+        return (movie.getCertificate() == Movie::certificateStringToEnum.at(certificateToMatch));//filter by the certificate
     });
     newDatabase.resize(distance(newDatabase.m_db.begin(),it));//resizes the array in the database to the correct size so no empty movies
     return newDatabase;

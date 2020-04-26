@@ -7,20 +7,17 @@
 #include <fstream>
 
 #include "Movie.h"
-
+#pragma once
 using namespace std;
-#ifndef COURSEWORK2_MOVIEDATABASE_H
-#define COURSEWORK2_MOVIEDATABASE_H
+
 class MovieDatabase{
-private:
-    vector<Movie> m_db;//vector of movies in the database
 public:
     static void tester();//test harness
     explicit MovieDatabase(const string& fileName);//constructor from file name
     MovieDatabase();//constructor of empty database
-    void add(const Movie& m);//add a movie
+    void add(const Movie& movie);//add a movie
     void resize(const size_t& newSize);
-    Movie get(int i) ;//get a movie in position i
+    Movie get(int index) ;//get a movie in position index
     int size() const;//the size of the database
 
     friend ostream& operator<< (std::ostream &out, const MovieDatabase &md);
@@ -31,5 +28,6 @@ public:
     MovieDatabase filterByGenre(const string& genreToMatch);//gives a new database with all the movies that have a specific genre
     void sortByDuration();//sorts the database by duration
     void sortByAverageRating();//sorts the database by average rating
+private:
+    vector<Movie> m_db;//vector of movies in the database
 };
-#endif //COURSEWORK2_MOVIEDATABASE_H

@@ -30,7 +30,7 @@ public:
     static const map<string, certificateEnum> certificateStringToEnum;//map for converting the string to the enum type
     static void tester();//test harness
 
-    Movie(const string& title, const int& releaseYear, const string& certificate, const string& genres, const int& duration, const int& averageRating);//constructs from all the attributes
+    Movie(const string& title, int releaseYear, const string& certificate, const string& genres, int duration, int averageRating);//constructs from all the attributes
     explicit Movie(const string& line);//creates a movie from the line in the file
     Movie();//empty movie constructor
     /**
@@ -71,13 +71,13 @@ public:
      */
     bool hasGenre(const string& genreToMatch) const;//gets if the movie is of the specified genre
 
-    friend ostream& operator<< (std::ostream &out, const Movie &m);//override the operator
+    friend ostream& operator<< (ostream& out, const Movie& movie);//override the operator
     bool operator< (const Movie& other) const {//overrides the less than operator
         return this->getReleaseYear() < other.getReleaseYear();//oldest to most recent
     }
     struct CompareMoviesByDuration { //struct used to compare movies by duration using a functor
-        bool operator () (const Movie& a, const Movie& b) const {
-            return a.getDuration() > b.getDuration();//longest to shortest
+        bool operator () (const Movie& movie1, const Movie& movie2) const {
+            return movie1.getDuration() > movie2.getDuration();//longest to shortest
         }
     };
 private:

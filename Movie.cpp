@@ -50,7 +50,7 @@ void Movie::tester(){
  * @param duration, duration of the movie
  * @param averageRating, average rating of the movie
  */
-Movie::Movie(const string& title, const int& releaseYear, const string& certificate, const string& genres, const int& duration, const int& averageRating) {//Constructor
+Movie::Movie(const string& title, int releaseYear, const string& certificate, const string& genres, int duration, int averageRating) {//Constructor
     m_title = title;
     m_releaseYear = releaseYear;
     m_certificate = Movie::certificateStringToEnum.at(certificate);
