@@ -19,12 +19,13 @@ const map<string, Movie::certificateEnum> Movie::certificateStringToEnum = {
         {"M",M},
         {"X",X}
 };
+
 /**
  * Test harness
  * Constructs 2 movies, a and b using two different constructors
- * prints the 2 movies
- * see if each movie has genre action
- * see if each movie has the genre fantasy
+ * Prints the 2 movies
+ * See if each movie has genre action
+ * See if each movie has the genre fantasy
  */
 void Movie::tester(){
     Movie a = Movie("Indiana Jones and the Last Crusade",1989,"PG-13","Action/Adventure/Fantasy",127,0);
@@ -38,6 +39,7 @@ void Movie::tester(){
     cout << "a has genre \"Fantasy\": " << a.hasGenre("Fantasy")<< "\n";
     cout << "b has genre \"Fantasy\": " << b.hasGenre("Fantasy")<< "\n";
 }
+
 /**
  * Constructor
  * Constructs a movie from all the attributes passed in
@@ -56,10 +58,11 @@ Movie::Movie(const string& title, const int& releaseYear, const string& certific
     m_duration = duration;
     m_averageRating = averageRating;
 }
+
 /**
  * Constructor
  * Creates a movie from a line in a file
- * has to be in the correct format
+ * Has to be in the correct format
  * @param line the line of the file
  */
 Movie::Movie(const string& line){
@@ -72,49 +75,50 @@ Movie::Movie(const string& line){
     m_duration = stoi(runtimeAndRatingSplit[1]);//converts to integer
     m_averageRating = stoi(runtimeAndRatingSplit[2]);//converts to integer
 }
+
 Movie::Movie(){}
+
 //accessor methods
 string Movie::getTitle() const{
     return m_title;
 }
+
 int Movie::getReleaseYear() const{
     return m_releaseYear;
 }
+
 Movie::certificateEnum Movie::getCertificate() const{
     return m_certificate;
 }
+
 string Movie::getGenres() const{
     return m_genres;
 }
+
 int Movie::getDuration() const{
     return m_duration;
 }
+
 int Movie::getAverageRating() const{
     return m_averageRating;
 }
-/**
- * Finds if a movie is of a specified genre
- * using find function
- * @param genreToMatch desired genre
- * @return true if the movie is of the desired genre
- */
+
 bool Movie::hasGenre(const string& genreToMatch) const{
     size_t found = getGenres().find(genreToMatch);//gets the position of the start of the the string to find
-    if (found!=string::npos){//if the position isn't the end of the string it has been found and therefore the movie has the genre
-        return true;
-    }
-    return false;
+    return found != string::npos; // Return true if the genreToMatch was found
 }
+
 /**
- * prints out the movie overloading the << operator
+ * Prints out the movie overloading the << operator
  * @param out output stream
- * @param m movie
+ * @param movie movie
  * @return the output stream full with the movie
  */
-ostream& operator<< (ostream &out, const Movie &m) {
-    out << "\"" << m.getTitle() << "\"," << to_string(m.getReleaseYear()) << ",\"" << Movie::searchForKey(m.getCertificate()) << "\",\"" << m.getGenres() <<  "\"," << to_string(m.getDuration()) << "," << to_string(m.getAverageRating()) << "\n";
+ostream& operator<< (ostream &out, const Movie &movie) {
+    out << "\"" << movie.getTitle() << "\"," << to_string(movie.getReleaseYear()) << ",\"" << Movie::searchForKey(movie.getCertificate()) << "\",\"" << movie.getGenres() << "\"," << to_string(movie.getDuration()) << "," << to_string(movie.getAverageRating()) << "\n";
     return out; // return ostream so I can chain calls to operator<< used for the
 }
+
 /**
  * Splits the string to split on each separator string into a vector
  * @param str string to split
@@ -136,6 +140,7 @@ vector<string> Movie::splitString(const string& str, const string& seperator) {
     }
     return parts;
 }
+
 /**
  * Search for the key string of the certificate from the certificate enum
  * @param certificateEnum certificate enum to match
@@ -143,9 +148,9 @@ vector<string> Movie::splitString(const string& str, const string& seperator) {
  */
 string Movie::searchForKey(const Movie::certificateEnum& certificateEnum){
     string key;
-    for (auto &i : Movie::certificateStringToEnum) {//goes through the map
-        if (i.second == certificateEnum) {//compares the second item (the value) to
-            key = i.first; //the key is set
+    for (auto &item : Movie::certificateStringToEnum) {//goes through the map
+        if (item.second == certificateEnum) {//compares the second item (the value) to
+            key = item.first; //the key is set
             break; //To stop searching
         }
     }

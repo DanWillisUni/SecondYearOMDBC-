@@ -13,10 +13,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c63bb631-71a1-46e7-8875-48030a3d744e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movie.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Movie.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movie.h" beforeDir="false" afterPath="$PROJECT_DIR$/Movie.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MovieDatabase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDatabase.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/MovieDatabase.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/MovieDatabase.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork2.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MovieDatabase.h" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDatabase.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CourseWork2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CourseWork2.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +75,9 @@
       <workItem from="1586529025806" duration="1019000" />
       <workItem from="1586603844688" duration="4254000" />
       <workItem from="1586943438981" duration="8991000" />
-      <workItem from="1586991796468" duration="133000" />
+      <workItem from="1586991796468" duration="241000" />
+      <workItem from="1587723010546" duration="968000" />
+      <workItem from="1587907567550" duration="2006000" />
     </task>
     <servers />
   </component>
@@ -131,10 +133,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="142" y="3" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1586945274952" />
-    <state x="336" y="184" key="com.intellij.ide.util.TipDialog" timestamp="1586991854217">
+    <state x="336" y="184" key="com.intellij.ide.util.TipDialog" timestamp="1587907568326">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="336" y="184" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1586991854217" />
+    <state x="336" y="184" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1587907568326" />
     <state x="367" y="3" key="refactoring.ChangeSignatureDialog" timestamp="1586438681659">
       <screen x="0" y="0" width="1280" height="720" />
     </state>

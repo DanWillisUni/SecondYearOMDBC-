@@ -20,7 +20,7 @@ public:
     MovieDatabase();//constructor of empty database
     void add(const Movie& m);//add a movie
     void resize(const size_t& newSize);
-    Movie get(const int& i) ;//get a movie in position i
+    Movie get(int i) ;//get a movie in position i
     int size() const;//the size of the database
 
     friend ostream& operator<< (std::ostream &out, const MovieDatabase &md);
